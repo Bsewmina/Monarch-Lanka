@@ -1,0 +1,20 @@
+.student_menu_btn{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+}
+.student_menu_btn:hover{
+    -fx-background-color: #04A4BF;
+    -fx-border-color: #04A4BF;
+    -fx-cursor: hand;
+    -fx-text-fill: White;
+}
+
+.student_menu_btn:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: gray;
+}

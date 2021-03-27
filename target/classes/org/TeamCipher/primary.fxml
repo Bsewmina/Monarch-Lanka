@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1132.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Hello! " textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <padding>
             <Insets right="40.0" />
          </padding>
@@ -26,10 +26,10 @@
                   <Image url="@../../images/logo2.png" />
                </image>
                <VBox.margin>
-                  <Insets bottom="20.0" left="33.0" top="20.0" />
+                  <Insets left="33.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Timetables" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_timetables" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Timetables" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -37,11 +37,14 @@
                      </image>
                   </ImageView>
                </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
                   <Insets left="55.0" />
                </padding>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Lecturers" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_lecturers" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Lecturers" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -49,11 +52,14 @@
                      </image>
                   </ImageView>
                </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
                   <Insets left="55.0" />
                </padding>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Student Groups" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_student_groups" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Student Groups" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -61,11 +67,14 @@
                      </image>
                   </ImageView>
                </graphic>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
                <padding>
                   <Insets left="55.0" />
                </padding>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Tags" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_tags" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Tags" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,8 +85,23 @@
                <padding>
                   <Insets left="55.0" />
                </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Working D/H" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_subjects" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Subjects" textAlignment="RIGHT" textFill="#bebec3">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/subjects.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_workingDH" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Working D/H" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -88,8 +112,23 @@
                <padding>
                   <Insets left="55.0" />
                </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Statistics" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_locations" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Locations" textAlignment="RIGHT" textFill="#bebec3">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/loc2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_statistics" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Statistics" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -100,10 +139,13 @@
                <padding>
                   <Insets left="55.0" />
                </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Sessions" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btn_sessions" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Sessions" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/session.png" />
                      </image>
@@ -112,13 +154,26 @@
                <padding>
                   <Insets left="55.0" />
                </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </Button>
-            <Button alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" text="Logout" textAlignment="RIGHT" textFill="#ff411f">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C; -fx-cursor: hand;" text="Logout" textAlignment="RIGHT" textFill="#ff411f">
                <padding>
                   <Insets left="55.0" />
                </padding>
             </Button>
          </children>
       </VBox>
+      <Label alignment="BASELINE_CENTER" layoutX="515.0" layoutY="314.0" prefHeight="59.0" prefWidth="514.0" text="Welcome to Monarch Lanka Institute" textFill="#727272">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="619.0" layoutY="362.0" prefHeight="22.0" prefWidth="306.0" text="Select a function from the side panel to continue " textFill="#878787">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
