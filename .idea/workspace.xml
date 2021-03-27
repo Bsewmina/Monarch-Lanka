@@ -5,31 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="Homepage Created">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/lecturer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/locations2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/session.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/stats.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/student_groups.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/subjects.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/tags~1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/timetable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/wd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/lecturer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/locations2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/session.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/stats.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/student groups.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/student_groups.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/subjects.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/tags~1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/timetable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/images/wd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/primary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/student_groups_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/loc2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/student_groups_menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/css/primary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/css/student_groups_menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/images/loc2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/student_groups_menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/primary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/primary.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -42,6 +33,13 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -82,7 +80,9 @@
     <option name="height" value="879" />
   </component>
   <component name="ProjectId" id="1qCZ1z7EIMndgeYmdG1dR0zt7ql" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -149,18 +149,35 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Restaurant Management System Test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ITPM 2021\Main Files\src\main\resources\images" />
+      <recent name="F:\ITPM 2021\Main Files\src\main\resources\org\TeamCipher" />
       <recent name="F:\ITPM 2021\Monarch-Lanka\src\main\resources" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -174,6 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616574786323</updated>
       <workItem from="1616574787666" duration="3565000" />
+      <workItem from="1616826702904" duration="15779000" />
     </task>
     <servers />
   </component>
@@ -215,7 +233,7 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -227,6 +245,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homepage Created" />
