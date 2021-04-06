@@ -9,9 +9,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1132.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="org.TeamCipher.PrimaryController">
+
+   <!--Change Controller accordingly up here^^ -->
+
+
    <children>
-      <Label alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Hello! " textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <padding>
             <Insets right="40.0" />
          </padding>
@@ -21,159 +26,123 @@
       </Label>
       <VBox prefHeight="699.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="logo" fitHeight="210.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logo" cache="true" fitHeight="210.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/logo2.png" />
                </image>
                <VBox.margin>
-                  <Insets left="33.0" top="20.0" />
+                  <Insets bottom="20.0" left="33.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Button fx:id="btn_timetables" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Timetables" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnTimetables" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#timeTables" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Timetables" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/timetable.png" />
                      </image>
                   </ImageView>
                </graphic>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
                <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
             </Button>
-            <Button fx:id="btn_lecturers" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Lecturers" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnLecturers" alignment="TOP_LEFT" cache="true" graphicTextGap="30.0" mnemonicParsing="false" onAction="#lecturers" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Lecturers" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/lecturer.png" />
                      </image>
                   </ImageView>
                </graphic>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
                <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
             </Button>
-            <Button fx:id="btn_student_groups" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Student Groups" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnSubject" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="311.0" mnemonicParsing="false" onAction="#Subject" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Subjects" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" scaleX="1.1" scaleY="1.1">
+                     <image>
+                        <Image url="@../../images/subject.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="55.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnStudentGroups" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#studentGoups" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Student Groups" textAlignment="RIGHT" textFill="#bebec3">
+               <graphic>
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/student_groups.png" />
                      </image>
                   </ImageView>
                </graphic>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
                <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
             </Button>
-            <Button fx:id="btn_tags" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Tags" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnLocation" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="409.0" mnemonicParsing="false" onAction="#location" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Location" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.81" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+                     <image>
+                        <Image url="@../../images/locations2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="55.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnTag" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#tags" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Tags" textAlignment="RIGHT" textFill="#bebec3">
+               <graphic>
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.93" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/tags~1.png" />
                      </image>
                   </ImageView>
                </graphic>
                <padding>
-                  <Insets left="55.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="btn_subjects" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Subjects" textAlignment="RIGHT" textFill="#bebec3">
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/subjects.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
             </Button>
-            <Button fx:id="btn_workingDH" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Working D/H" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnWorking" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#WorkingDH" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Working D/H" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/wd.png" />
                      </image>
                   </ImageView>
                </graphic>
                <padding>
-                  <Insets left="55.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Button>
-            <Button fx:id="btn_locations" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Locations" textAlignment="RIGHT" textFill="#bebec3">
-               <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/loc2.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
             </Button>
-            <Button fx:id="btn_statistics" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Statistics" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnStatistic" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#statistic" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Statistics" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/stats.png" />
                      </image>
                   </ImageView>
                </graphic>
                <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
             </Button>
-            <Button fx:id="btn_sessions" alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Sessions" textAlignment="RIGHT" textFill="#bebec3">
+            <Button fx:id="btnSession" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#session" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Sessions" textAlignment="RIGHT" textFill="#bebec3">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView cache="true" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/session.png" />
                      </image>
                   </ImageView>
                </graphic>
                <padding>
-                  <Insets left="55.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="30.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="264.0" style="-fx-background-color: #1F203C; -fx-cursor: hand;" text="Logout" textAlignment="RIGHT" textFill="#ff411f">
-               <padding>
-                  <Insets left="55.0" />
+                  <Insets left="55.0" top="10.0" />
                </padding>
             </Button>
          </children>
       </VBox>
-      <Label alignment="BASELINE_CENTER" layoutX="515.0" layoutY="314.0" prefHeight="59.0" prefWidth="514.0" text="Welcome to Monarch Lanka Institute" textFill="#727272">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="619.0" layoutY="362.0" prefHeight="22.0" prefWidth="306.0" text="Select a function from the side panel to continue " textFill="#878787">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>

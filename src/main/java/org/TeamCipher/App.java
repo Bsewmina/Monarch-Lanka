@@ -17,6 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        stage.setTitle("Monarch Lanka Institute Time-Table management System");
         scene = new Scene(loadFXML("primary"), 1250, 750);
         stage.setScene(scene);
         stage.show();

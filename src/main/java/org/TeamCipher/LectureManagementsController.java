@@ -1,20 +1,22 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
+public class LectureManagementsController {
 
     @FXML
     private Label mainLabel;
     @FXML
     private ImageView logo;
-//btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
+    @FXML
+    private Button btnTimetables;
+
 
     public void Subject(ActionEvent event) {
 
@@ -64,5 +66,5 @@ public class PrimaryController {
         mainLabel.setText("Time Table Clicked");
 
     }
-}
 
+}
