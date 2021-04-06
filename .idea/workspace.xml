@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="Homepage Created">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="testing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LecturerManagment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/Lecturer_Managment.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -144,6 +144,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/TeamCipher" />
     <property name="last_opened_file_path" value="$USER_HOME$/Restaurant Management System Test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -183,6 +184,14 @@
       <workItem from="1616574787666" duration="3565000" />
       <workItem from="1616826702904" duration="15779000" />
     </task>
+    <task id="LOCAL-00001" summary="testing">
+      <created>1617722461959</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617722461960</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -239,7 +248,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homepage Created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homepage Created" />
+    <MESSAGE value="testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/module-info.java">
