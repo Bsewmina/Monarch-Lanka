@@ -10,11 +10,13 @@ import java.io.IOException;
 
 public class PrimaryController {
 
+    //------------------------------------------------------------------------------------------
+
     @FXML
     private Label mainLabel;
     @FXML
     private ImageView logo;
-//btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
+    //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
 
     public void Subject(ActionEvent event) {
 
@@ -64,5 +66,6 @@ public class PrimaryController {
         mainLabel.setText("Time Table Clicked");
 
     }
+    //------------------------------------------------------------------------------------------
 }
 

@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class LectureManagementsController {
 
+    //------------------------------------------------------------------------------------------
+
     @FXML
     private Label mainLabel;
     @FXML
@@ -67,4 +69,5 @@ public class LectureManagementsController {
 
     }
 
+    //----------------------------------------------------------------------------------------------
 }
