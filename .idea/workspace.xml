@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="Homepage Updated v3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/DaysHoursController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/DaysHours.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/DaysHours.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/DaysHoursController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/student_groups_menu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/LectureManagementsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/LectureManagementsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/DaysHoursController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/DaysHoursController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/DaysHours.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/DaysHours.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/student groups.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/images/subject1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/DaysHours.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/DaysHours.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/DaysHoursController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/DaysHoursController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/PrimaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/student_groups_menu.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -206,6 +207,7 @@
       <workItem from="1616826702904" duration="15779000" />
       <workItem from="1617788086587" duration="3164000" />
       <workItem from="1617791923030" duration="2773000" />
+      <workItem from="1617900421090" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1617722461959</created>

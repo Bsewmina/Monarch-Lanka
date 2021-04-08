@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.DaysHoursController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="1212.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.DaysHoursController">
 
     <!--Change Controller accordingly up here^^ -->
 
@@ -151,40 +151,43 @@
          <children>
             <Text layoutX="320.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Working Days &amp; Hours" wrappingWidth="189.59248352050787" />
             <Text layoutX="72.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Working Days" wrappingWidth="174.56402969360352" />
-            <Spinner layoutX="293.0" layoutY="66.0" prefHeight="32.0" prefWidth="329.0" />
+            <Spinner fx:id="SpNumOfWorkingDays" layoutX="293.0" layoutY="66.0" prefHeight="32.0" prefWidth="329.0" />
             <Label layoutX="72.0" layoutY="145.0" text="Select Your Working Days" />
-            <CheckBox layoutX="293.0" layoutY="145.0" mnemonicParsing="false" text="Monday" />
-            <CheckBox layoutX="415.0" layoutY="145.0" mnemonicParsing="false" text="Tuesday" />
-            <CheckBox layoutX="529.0" layoutY="145.0" mnemonicParsing="false" text="Wednsday" />
-            <CheckBox layoutX="293.0" layoutY="179.0" mnemonicParsing="false" text="Thursday" />
-            <CheckBox layoutX="415.0" layoutY="179.0" mnemonicParsing="false" text="Friday" />
-            <CheckBox layoutX="529.0" layoutY="179.0" mnemonicParsing="false" text="Saturday" />
-            <CheckBox layoutX="293.0" layoutY="218.0" mnemonicParsing="false" text="Sunday" />
-            <Spinner layoutX="298.0" layoutY="301.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="301.0" prefHeight="32.0" prefWidth="138.0" />
+            <CheckBox fx:id="CbMonday" layoutX="293.0" layoutY="145.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Monday" />
+            <CheckBox fx:id="CbTuesday" layoutX="415.0" layoutY="145.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Tuesday" />
+            <CheckBox fx:id="CbWednesday" layoutX="529.0" layoutY="145.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Wednesday" />
+            <CheckBox fx:id="CbThursday" layoutX="293.0" layoutY="179.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Thursday" />
+            <CheckBox fx:id="CbFriday" layoutX="415.0" layoutY="179.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Friday" />
+            <CheckBox fx:id="CbSaturday" layoutX="529.0" layoutY="179.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Saturday" />
+            <CheckBox fx:id="CbSunday" layoutX="293.0" layoutY="218.0" mnemonicParsing="false" onAction="#DaysCheckBoxes" text="Sunday" />
+            <Spinner fx:id="SpMonHrs" disable="true" layoutX="298.0" layoutY="301.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpMonMins" disable="true" layoutX="478.0" layoutY="301.0" prefHeight="32.0" prefWidth="138.0" />
             <Label layoutX="72.0" layoutY="268.0" text="Working Time Per Day" />
             <Label layoutX="293.0" layoutY="268.0" text="Hours" />
             <Label layoutX="473.0" layoutY="268.0" text="Minutes" />
             <Label layoutX="159.0" layoutY="306.0" text="Monday" />
             <Label layoutX="159.0" layoutY="346.0" text="Tuesday" />
-            <Spinner layoutX="298.0" layoutY="341.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="341.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="298.0" layoutY="379.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="379.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpTuesHrs" disable="true" layoutX="298.0" layoutY="341.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpTuesMins" disable="true" layoutX="478.0" layoutY="341.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpWedHrs" disable="true" layoutX="298.0" layoutY="379.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpWedMins" disable="true" layoutX="478.0" layoutY="379.0" prefHeight="32.0" prefWidth="138.0" />
             <Label layoutX="159.0" layoutY="384.0" text="Wednsday" />
             <Label layoutX="159.0" layoutY="423.0" text="Thursday" />
-            <Spinner layoutX="298.0" layoutY="418.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="418.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpThrsHrs" disable="true" layoutX="298.0" layoutY="418.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpThrsMins" disable="true" layoutX="478.0" layoutY="418.0" prefHeight="32.0" prefWidth="138.0" />
             <Label layoutX="159.0" layoutY="464.0" text="Friday" />
-            <Spinner layoutX="298.0" layoutY="459.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="459.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="298.0" layoutY="501.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="501.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpFriHrs" disable="true" layoutX="298.0" layoutY="459.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpFriMins" disable="true" layoutX="478.0" layoutY="459.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpSatHrs" disable="true" layoutX="298.0" layoutY="501.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpSatMins" disable="true" layoutX="478.0" layoutY="501.0" prefHeight="32.0" prefWidth="138.0" />
             <Label layoutX="159.0" layoutY="506.0" text="Saturday" />
             <Label layoutX="159.0" layoutY="545.0" text="Sunday" />
-            <Spinner layoutX="298.0" layoutY="540.0" prefHeight="32.0" prefWidth="138.0" />
-            <Spinner layoutX="478.0" layoutY="540.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpSunHrs" disable="true" layoutX="298.0" layoutY="540.0" prefHeight="32.0" prefWidth="138.0" />
+            <Spinner fx:id="SpSunMins" disable="true" layoutX="478.0" layoutY="540.0" prefHeight="32.0" prefWidth="138.0" />
          </children>
       </Pane>
+      <Button fx:id="BtnViewWDH" layoutX="742.0" layoutY="707.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="View" />
+      <Button fx:id="BtnClearWDH" layoutX="866.0" layoutY="707.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Clear" />
+      <Button layoutX="989.0" layoutY="707.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Submit" />
     </children>
 </AnchorPane>
