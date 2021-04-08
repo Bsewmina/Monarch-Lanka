@@ -1,16 +1,13 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
-
-    //------------------------------------------------------------------------------------------
+public class TagsExistingController {
 
     @FXML
     private Label mainLabel;
@@ -65,6 +62,12 @@ public class PrimaryController {
         mainLabel.setText("Time Table Clicked");
 
     }
-    //------------------------------------------------------------------------------------------
-}
 
+    public void manage_existing_tags(ActionEvent event) throws IOException {
+        App.setRoot("tags_existing");
+    }
+
+    public void create_new_tags(ActionEvent event) throws IOException {
+        App.setRoot("add_tags");
+    }
+}

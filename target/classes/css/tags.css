@@ -1,0 +1,92 @@
+/*                                                  Delete button */
+
+.tag_delete{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+}
+.tag_delete:hover{
+    -fx-background-color: #FF2B2B;
+    -fx-border-color: #FF2B2B;
+    -fx-cursor: hand;
+    -fx-text-fill: White;
+}
+
+.tag_delete:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: gray;
+}
+
+/*                                                  Update button V1 */
+
+.tag_update{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-text-fill: Black;
+}
+.tag_update:hover{
+    -fx-background-color: #3BD08B;
+    -fx-border-color: #3BD08B;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+
+}
+
+.tag_update:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+
+}
+
+/*                                                   Clear button */
+
+.tag_clear{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-text-fill: Black;
+}
+.tag_clear:hover{
+    -fx-background-color: transparent;
+    -fx-border-color: #005BB7;
+    -fx-cursor: hand;
+    -fx-text-fill: #005BB7;
+
+}
+
+.tag_clear:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+
+}
+
+/*                                                   TextField  */
+
+.tag_textField{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-text-fill: Black;
+}
+
+.tag_textField:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+}

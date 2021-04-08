@@ -2,20 +2,25 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.StudentGroupsMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.AddGroupController">
 
     <!--Change Controller accordingly up here^^ -->
 
 
     <children>
-        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Add Student Groups" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <padding>
                 <Insets right="40.0" />
             </padding>
@@ -143,15 +148,63 @@
                 </Button>
             </children>
         </VBox>
-        <Button id="student_menu_btn" layoutX="562.0" layoutY="256.0" mnemonicParsing="false" onAction="#manage_existing_stdGroups" prefHeight="93.0" prefWidth="346.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Manage Existing">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Button>
-        <Button id="student_menu_btn" layoutX="555.0" layoutY="361.0" mnemonicParsing="false" onAction="#create_new_stdGroups" prefHeight="93.0" prefWidth="346.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Create New">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Button>
+      <Label layoutX="516.0" layoutY="340.0" prefHeight="22.0" prefWidth="119.0" text="Group No">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="293.0" prefHeight="22.0" prefWidth="119.0" text="Program">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="516.0" layoutY="248.0" prefHeight="23.0" prefWidth="190.0" text="Academic Year.Semester">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="761.0" layoutY="247.0" prefHeight="26.0" prefWidth="216.0" styleClass="tag_textField" stylesheets="@../../css/tags.css">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
+      <Button layoutX="895.0" layoutY="636.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="181.0" styleClass="tag_update" stylesheets="@../../css/tags.css" text="Update Details" />
+      <Button layoutX="671.0" layoutY="636.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="181.0" styleClass="tag_clear" stylesheets="@../../css/tags.css" text="Clear Fields" />
+      <Label alignment="BASELINE_LEFT" layoutX="308.0" layoutY="124.0" prefHeight="33.0" prefWidth="264.0" text="Create a New Student Group">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="761.0" layoutY="290.0" prefHeight="26.0" prefWidth="216.0" styleClass="tag_textField" stylesheets="@../../css/tags.css" />
+      <Spinner layoutX="761.0" layoutY="338.0" prefHeight="26.0" prefWidth="216.0" />
+      <Label layoutX="516.0" layoutY="385.0" prefHeight="22.0" prefWidth="119.0" text="Sub-group No">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Spinner layoutX="761.0" layoutY="383.0" prefHeight="26.0" prefWidth="216.0" />
+      <Button layoutX="446.0" layoutY="636.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="181.0" styleClass="tag_clear" stylesheets="@../../css/tags.css" text="Generate IDs" />
+      <Circle fill="DODGERBLUE" layoutX="584.0" layoutY="141.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="382.0943603515625" endY="-1.52587890625E-5" layoutX="797.0" layoutY="141.0" startX="-194.811279296875" startY="-1.52587890625E-5" />
+      <Label layoutX="516.0" layoutY="491.0" prefHeight="23.0" prefWidth="190.0" text="Group ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="761.0" layoutY="490.0" opacity="0.8" prefHeight="26.0" prefWidth="216.0" styleClass="tag_textField" stylesheets="@../../css/tags.css">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
+      <Label layoutX="516.0" layoutY="532.0" prefHeight="23.0" prefWidth="190.0" text="Sub-group ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="761.0" layoutY="531.0" opacity="0.8" prefHeight="26.0" prefWidth="216.0" styleClass="tag_textField" stylesheets="@../../css/tags.css">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </TextField>
     </children>
 </AnchorPane>

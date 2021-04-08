@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.StudentGroupsMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.TagsMenuController">
 
     <!--Change Controller accordingly up here^^ -->
 
 
     <children>
-        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Tags Menu" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <padding>
                 <Insets right="40.0" />
             </padding>
@@ -143,12 +143,12 @@
                 </Button>
             </children>
         </VBox>
-        <Button id="student_menu_btn" layoutX="562.0" layoutY="256.0" mnemonicParsing="false" onAction="#manage_existing_stdGroups" prefHeight="93.0" prefWidth="346.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Manage Existing">
+        <Button id="student_menu_btn" layoutX="562.0" layoutY="256.0" mnemonicParsing="false" onAction="#manage_existing_tags" prefHeight="93.0" prefWidth="346.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Manage Existing">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
-        <Button id="student_menu_btn" layoutX="555.0" layoutY="361.0" mnemonicParsing="false" onAction="#create_new_stdGroups" prefHeight="93.0" prefWidth="346.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Create New">
+        <Button id="student_menu_btn" layoutX="555.0" layoutY="361.0" mnemonicParsing="false" onAction="#create_new_tags" prefHeight="93.0" prefWidth="346.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Create New">
             <font>
                 <Font size="18.0" />
             </font>

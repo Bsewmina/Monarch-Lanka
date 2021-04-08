@@ -1,1 +1,6 @@
+org\TeamCipher\AddTagsController.class
 org\TeamCipher\LectureManagementsController.class
+org\TeamCipher\AddGroupController.class
+org\TeamCipher\StudentExistingController.class
+org\TeamCipher\TagsExistingController.class
+org\TeamCipher\TagsMenuController.class
