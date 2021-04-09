@@ -1,1 +1,4 @@
-org\TeamCipher\LectureManagementsController.class
+org\TeamCipher\LecturerManagmentController.class
+org\TeamCipher\NewLecturerController.class
+org\TeamCipher\SubjectManagmentController.class
+org\TeamCipher\NewSubjectController.class

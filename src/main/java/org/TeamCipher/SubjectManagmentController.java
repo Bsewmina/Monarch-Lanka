@@ -1,14 +1,13 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
+public class SubjectManagmentController {
 
     //------------------------------------------------------------------------------------------
 
@@ -69,4 +68,3 @@ public class PrimaryController {
     }
     //------------------------------------------------------------------------------------------
 }
-

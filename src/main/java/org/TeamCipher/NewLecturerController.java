@@ -1,14 +1,13 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
+public class NewLecturerController {
 
     //------------------------------------------------------------------------------------------
 
@@ -48,8 +47,8 @@ public class PrimaryController {
         mainLabel.setText("statistics Clicked");
     }
 
-    public void studentGoups(ActionEvent event) {
-
+    public void studentGoups(ActionEvent event) throws IOException {
+        App.setRoot("student_groups_menu");
     }
 
     public void location(ActionEvent event ){
@@ -61,12 +60,10 @@ public class PrimaryController {
         mainLabel.setText("tags Clicked");
     }
 
-    public void timeTables(ActionEvent event) throws IOException {
+    public void timeTables(ActionEvent event) {
 
-        App.setRoot("new_lecturer");
-        //mainLabel.setText("Time Table Clicked");
+        mainLabel.setText("Time Table Clicked");
 
     }
     //------------------------------------------------------------------------------------------
 }
-
