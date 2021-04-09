@@ -11,6 +11,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.NewLecturerController">
 
     <children>
@@ -153,7 +155,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="761.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+      <TextField id="txtField_id" fx:id="txtField_id" layoutX="761.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
          <font>
             <Font size="14.0" />
          </font></TextField>
@@ -162,7 +164,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="762.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+      <TextField id="txtField_name" fx:id="txtField_name" layoutX="762.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
          <font>
             <Font size="14.0" />
          </font>
@@ -197,27 +199,77 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="762.0" layoutY="274.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
-      <ChoiceBox layoutX="762.0" layoutY="324.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
-      <ChoiceBox layoutX="762.0" layoutY="374.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
-      <ChoiceBox layoutX="762.0" layoutY="424.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
-      <ChoiceBox layoutX="762.0" layoutY="474.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
-      <TextField editable="false" layoutX="762.0" layoutY="524.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30; -fx-font-weight: bold;">
+      <ChoiceBox id="choiceBox_faculty" fx:id="choiceBox_faculty" layoutX="762.0" layoutY="274.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Computiing" />
+                  <String fx:value="Engineering" />
+                  <String fx:value="Business" />
+                  <String fx:value="Humanities &amp; Sciences" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <ChoiceBox id="choiceBox_department" fx:id="choiceBox_department" layoutX="762.0" layoutY="324.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="IT" />
+                  <String fx:value="SE" />
+                  <String fx:value="ISE" />
+                  <String fx:value="DS" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <ChoiceBox id="choiceBox_center" fx:id="choiceBox_center" layoutX="762.0" layoutY="374.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Malabe" />
+                  <String fx:value="Metro" />
+                  <String fx:value="Matara" />
+                  <String fx:value="Kandy" />
+                  <String fx:value="Kurunagala" />
+                  <String fx:value="Jaffna" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <ChoiceBox id="choiceBox_building" fx:id="choiceBox_building" layoutX="762.0" layoutY="424.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Main building" />
+                  <String fx:value="New building" />
+                  <String fx:value="A-block" />
+                  <String fx:value="B-block" />
+                  <String fx:value="C-block" />
+                  <String fx:value="D-block" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <ChoiceBox id="choiceBox_level" fx:id="choiceBox_level" layoutX="762.0" layoutY="474.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="1" />
+                  <String fx:value="2" />
+                  <String fx:value="4" />
+                  <String fx:value="5" />
+                  <String fx:value="6" />
+              </FXCollections>
+          </items>
+      </ChoiceBox>
+      <TextField id="txtInput_rank" fx:id="txtInput_rank" editable="false" layoutX="762.0" layoutY="524.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30; -fx-font-weight: bold;">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="699.0" layoutY="606.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Clear">
+      <Button id="btn_clear" fx:id="btn_clear" layoutX="699.0" layoutY="606.0" mnemonicParsing="false" onAction="#clear" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Clear">
          <font>
             <Font size="12.0" />
          </font>
       </Button>
-      <Button layoutX="517.0" layoutY="606.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Genarate Rank">
+      <Button id="btn_genarateRank" fx:id="btn_genarateRank" layoutX="517.0" layoutY="606.0" mnemonicParsing="false" onAction="#genarateRank" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Genarate Rank">
          <font>
             <Font size="12.0" />
          </font>
       </Button>
-      <Button layoutX="873.0" layoutY="606.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Save Details">
+      <Button id="btn_save" fx:id="btn_save" layoutX="873.0" layoutY="606.0" mnemonicParsing="false" onAction="#saveDetails" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Save Details">
          <font>
             <Font size="12.0" />
          </font>

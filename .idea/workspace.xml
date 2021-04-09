@@ -4,49 +4,19 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="UI created - member 2">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/3d7b0537-6f9f-4db3-a724-ed2d36815dee.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/4df75c87-d910-4465-845b-acab8f1acf6d.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_04_2021_06_40_[Default_Changelist]/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_04_2021_06_40_[Default_Changelist]/PrimaryController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_04_2021_06_40_[Default_Changelist]/module-info.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_09_04_2021_06_40_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LecturerManagmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/NewSubjectController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/SQliteConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/SubjectManagmentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/Subject_Managment.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/new_lecturer.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/new_subject.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/LecturerManagmentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/NewLecturerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/SQliteConnection.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/new_lecturer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LectureManagementsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/NewLecturerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LecturerManagmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LecturerManagmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/NewLecturerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/NewLecturerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/SQliteConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/SQliteConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/Lecturer_Managment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/Lecturer_Managment.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/primary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/student_groups_menu.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/student groups.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/images/subject1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/new_lecturer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/TeamCipher/new_lecturer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/LectureManagementsController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/Lecturer_Managment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/Lecturer_Managment.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/PrimaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/primary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +168,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DatabaseDriversLRU" value="sqlite&#10;sqlite.xerial" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -208,9 +178,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/SceneBuilder/SceneBuilder.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.27931035" />
+    <property name="project.structure.side.proportion" value="0.32413793" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -253,7 +223,9 @@
       <updated>1616574786323</updated>
       <workItem from="1616574787666" duration="3565000" />
       <workItem from="1616826702904" duration="15779000" />
-      <workItem from="1617889681676" duration="21959000" />
+      <workItem from="1617889681676" duration="22208000" />
+      <workItem from="1617931295482" duration="95000" />
+      <workItem from="1617953205750" duration="26684000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1617722461959</created>
@@ -290,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617728728022</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UI created - member 2">
+      <created>1617931038107</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617931038107</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

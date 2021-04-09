@@ -28,9 +28,9 @@ public class PrimaryController {
         mainLabel.setText("WorkingDH Clicked");
     }
 
-    public void lecturers(ActionEvent event) {
+    public void lecturers(ActionEvent event) throws IOException {
 
-        mainLabel.setText("lecturers Clicked");
+        App.setRoot("Lecturer_Managment");
     }
 
     public void logout(ActionEvent event) {
@@ -63,8 +63,6 @@ public class PrimaryController {
 
     public void timeTables(ActionEvent event) throws IOException {
 
-        App.setRoot("new_lecturer");
-        //mainLabel.setText("Time Table Clicked");
 
     }
     //------------------------------------------------------------------------------------------
