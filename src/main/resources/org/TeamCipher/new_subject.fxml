@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.NewSubjectController">
+    <children>
+        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Subject" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <padding>
+                <Insets right="40.0" />
+            </padding>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <VBox prefHeight="699.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="logo" cache="true" fitHeight="210.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/logo2.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="33.0" top="20.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Button fx:id="btnTimetables" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#timeTables" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Timetables" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/timetable.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnLecturers" alignment="TOP_LEFT" cache="true" graphicTextGap="30.0" mnemonicParsing="false" onAction="#lecturers" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Lecturers" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/lecturer.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSubject" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="311.0" mnemonicParsing="false" onAction="#Subject" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Subjects" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" scaleX="1.1" scaleY="1.1">
+                            <image>
+                                <Image url="@../../images/subject.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnStudentGroups" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#studentGoups" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Student Groups" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/student_groups.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnLocation" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="409.0" mnemonicParsing="false" onAction="#location" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Location" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.81" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+                            <image>
+                                <Image url="@../../images/locations2.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnTag" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#tags" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Tags" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.93" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/tags~1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnWorking" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#WorkingDH" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Working D/H" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/wd.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnStatistic" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#statistic" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Statistics" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/stats.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSession" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#session" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Sessions" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/session.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+      <Label layoutX="525.0" layoutY="234.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Offered Semester">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="185.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Offered Year">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="285.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Subject Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="335.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Subject Code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="385.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Number of Lecture Hours">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="435.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Number of Tutorial Hours">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="527.0" layoutY="485.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Number of lab Hours">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="264.0" layoutY="87.0" prefHeight="43.0" prefWidth="986.0" text="Create a New Subject">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox layoutX="805.0" layoutY="183.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
+      <RadioButton layoutX="805.0" layoutY="225.0" mnemonicParsing="false" text="1 st Semester">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="923.0" layoutY="225.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="114.0" text="2 nd Semester">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <TextField layoutX="805.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="805.0" layoutY="334.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="527.0" layoutY="535.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Number of Evaluation Hours">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Spinner layoutX="891.0" layoutY="385.0" />
+      <Spinner layoutX="891.0" layoutY="434.0" />
+      <Spinner layoutX="891.0" layoutY="484.0" />
+      <Spinner layoutX="891.0" layoutY="534.0" />
+      <Button layoutX="527.0" layoutY="616.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Clear">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="921.0" layoutY="616.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Save Details">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

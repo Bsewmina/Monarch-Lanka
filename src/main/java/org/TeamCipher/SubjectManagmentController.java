@@ -1,14 +1,13 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
+public class SubjectManagmentController {
 
     //------------------------------------------------------------------------------------------
 
@@ -28,9 +27,9 @@ public class PrimaryController {
         mainLabel.setText("WorkingDH Clicked");
     }
 
-    public void lecturers(ActionEvent event) throws IOException {
+    public void lecturers(ActionEvent event) {
 
-        App.setRoot("Lecturer_Managment");
+        mainLabel.setText("lecturers Clicked");
     }
 
     public void logout(ActionEvent event) {
@@ -63,8 +62,9 @@ public class PrimaryController {
 
     public void timeTables(ActionEvent event) throws IOException {
 
+        App.setRoot("new_lecturer");
+        //mainLabel.setText("Time Table Clicked");
 
     }
     //------------------------------------------------------------------------------------------
 }
-
