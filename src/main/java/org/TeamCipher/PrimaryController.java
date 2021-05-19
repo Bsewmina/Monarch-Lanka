@@ -43,17 +43,18 @@ public class PrimaryController {
         mainLabel.setText("session Clicked");
     }
 
-    public void statistic(ActionEvent event) {
+    public void statistic(ActionEvent event) throws IOException {
 
         mainLabel.setText("statistics Clicked");
+        App.setRoot("statistic");
     }
 
     public void studentGoups(ActionEvent event) {
 
     }
 
-    public void location(ActionEvent event ){
-        mainLabel.setText("location Clicked");
+    public void location(ActionEvent event ) throws IOException {
+        App.setRoot("location");
     }
 
     public void tags(ActionEvent event) {
