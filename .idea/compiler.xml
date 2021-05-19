@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="MonarchLanaka" />
         <module name="TimeTableMngFX" />
+        <module name="Monarch-Lanka" />
       </profile>
     </annotationProcessing>
   </component>

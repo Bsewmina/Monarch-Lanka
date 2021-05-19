@@ -2,23 +2,19 @@ package org.TeamCipher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 
-public class LectureManagementsController {
-
+public class NewSubjectController {
     //------------------------------------------------------------------------------------------
 
     @FXML
     private Label mainLabel;
     @FXML
     private ImageView logo;
-    @FXML
-    private Button btnTimetables;
-
+    //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
 
     public void Subject(ActionEvent event) {
 
@@ -50,8 +46,8 @@ public class LectureManagementsController {
         mainLabel.setText("statistics Clicked");
     }
 
-    public void studentGoups(ActionEvent event) throws IOException {
-        App.setRoot("student_groups_menu");
+    public void studentGoups(ActionEvent event) {
+
     }
 
     public void location(ActionEvent event ){
@@ -63,11 +59,11 @@ public class LectureManagementsController {
         mainLabel.setText("tags Clicked");
     }
 
-    public void timeTables(ActionEvent event) {
+    public void timeTables(ActionEvent event) throws IOException {
 
-        mainLabel.setText("Time Table Clicked");
+        App.setRoot("new_lecturer");
+        //mainLabel.setText("Time Table Clicked");
 
     }
-
-    //----------------------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------------------
 }
