@@ -38,9 +38,10 @@ public class PrimaryController {
         mainLabel.setText("logout Clicked");
     }
 
-    public void session(ActionEvent event) {
+    public void session(ActionEvent event) throws IOException {
 
         mainLabel.setText("session Clicked");
+        App.setRoot("manageRoom");
     }
 
     public void statistic(ActionEvent event) throws IOException {

@@ -146,7 +146,7 @@
                 </Button>
             </children>
         </VBox>
-      <TableView fx:id="tableView" layoutX="338.0" layoutY="114.0" prefHeight="374.0" prefWidth="760.0">
+      <TableView fx:id="tableView" layoutX="338.0" layoutY="114.0" onMouseClicked="#mouseClick" prefHeight="374.0" prefWidth="760.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="87.99996948242188" text="ID" />
           <TableColumn fx:id="building" minWidth="0.0" prefWidth="179.19998168945312" text="Building" />
@@ -155,24 +155,25 @@
             <TableColumn fx:id="cap" prefWidth="162.4000244140625" text="Capacity" />
         </columns>
       </TableView>
-      <Button id="student_menu_btn" layoutX="409.0" layoutY="625.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Clear Feilds">
+      <Button id="student_menu_btn" layoutX="417.0" layoutY="625.0" mnemonicParsing="false" onAction="#clearField" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Clear Feilds">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="student_menu_btn" layoutX="598.0" layoutY="625.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Delete">
+      <Button id="student_menu_btn" layoutX="598.0" layoutY="625.0" mnemonicParsing="false" onAction="#DeleteBtn" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Delete">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button id="student_menu_btn" layoutX="798.0" layoutY="625.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Update">
+      <Button id="student_menu_btn" fx:id="update" layoutX="798.0" layoutY="625.0" mnemonicParsing="false" onAction="#UpdateTable" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Update">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="363.0" layoutY="517.0" />
-      <TextField layoutX="523.0" layoutY="517.0" />
-      <TextField layoutX="693.0" layoutY="517.0" />
-      <TextField layoutX="872.0" layoutY="517.0" />
+      <TextField fx:id="bname" layoutX="460.0" layoutY="517.0" />
+      <TextField fx:id="froom" layoutX="619.0" layoutY="517.0" />
+      <TextField fx:id="frtype" layoutX="783.0" layoutY="517.0" />
+      <TextField fx:id="fcap" layoutX="943.0" layoutY="517.0" />
+      <TextField fx:id="lid" disable="true" layoutX="343.0" layoutY="517.0" onAction="#DeleteBtn" prefHeight="25.0" prefWidth="111.0" />
     </children>
 </AnchorPane>
