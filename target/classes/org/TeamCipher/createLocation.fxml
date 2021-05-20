@@ -151,7 +151,7 @@
                 <Font size="14.0" />
             </font>
         </Button>
-        <Button id="student_menu_btn" layoutX="576.0" layoutY="579.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="139.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Clear Fields">
+        <Button id="student_menu_btn" fx:id="clear" layoutX="576.0" layoutY="579.0" mnemonicParsing="false" onAction="#ClearFields" prefHeight="32.0" prefWidth="139.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Clear Fields">
             <font>
                 <Font size="14.0" />
             </font>
@@ -167,12 +167,12 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="549.0" layoutY="339.0" text="Room Type">
+        <Label layoutX="547.0" layoutY="339.0" text="Room Type">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <Label layoutX="558.0" layoutY="441.0" text="Capacity">
+        <Label layoutX="548.0" layoutY="441.0" text="Capacity">
             <font>
                 <Font size="14.0" />
             </font>

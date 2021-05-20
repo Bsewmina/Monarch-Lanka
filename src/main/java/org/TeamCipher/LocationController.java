@@ -1,15 +1,15 @@
 package org.TeamCipher;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.Optional;
 
 public class LocationController {
 
@@ -18,9 +18,12 @@ public class LocationController {
     @FXML
     private Label mainLabel;
     @FXML
-    private TextField bname,rname,capacity;
+    private TextField bname,rname,capacity,fieldid;
     @FXML
     private RadioButton lab,lhall;
+
+    @FXML
+    private Button save,clear;
 
 
 
@@ -51,9 +54,10 @@ public class LocationController {
         mainLabel.setText("logout Clicked");
     }
 
-    public void session(ActionEvent event) {
+    public void session(ActionEvent event) throws IOException {
 
         mainLabel.setText("session Clicked");
+        App.setRoot("manageRoom");
     }
 
     public void statistic(ActionEvent event) throws IOException {
@@ -68,6 +72,10 @@ public class LocationController {
 
     public void location(ActionEvent event ) throws IOException {
         App.setRoot("location");
+    }
+
+    public void locationManage(ActionEvent event ) throws IOException {
+        App.setRoot("manageLocation");
     }
 
     public void tags(ActionEvent event) {
@@ -103,18 +111,41 @@ public class LocationController {
 
 
 
-    public void InsertData(ActionEvent event) {
+    public void InsertData(ActionEvent event) throws IOException {
 
-       String cap = capacity.getText();
-        int i=Integer.parseInt(cap);
-        SendToDataBase(bname.getText(),rname.getText(),i);
+        if(bname.getText().isEmpty()){
 
+            alertError("Please Enter Building Name",null);
+
+
+        }
+        else if(rname.getText().isEmpty()){
+
+            alertError("Please Enter Room Name",null);
+
+        }
+        else if(!lhall.isSelected() ){
+
+            alertError("Please Select",null);
+
+        }
+        else if(capacity.getText().isEmpty()){
+
+            alertError("Please Enter Capacity",null);
+
+        }
+
+        else {
+
+            String cap = capacity.getText();
+            int i = Integer.parseInt(cap);
+
+            SendToDataBase(bname.getText(), rname.getText(), i);
+        }
 
     }
 
-
-
-    public void SendToDataBase(String builname,String roname,int capacity){
+    public void SendToDataBase(String builname,String roname,int capacity) throws IOException {
 
         String roomType;
 
@@ -128,21 +159,16 @@ public class LocationController {
         }
 
 
-
-
-        int id=0;
-
         Connection con = SQliteConnection.DBconnect();
         PreparedStatement ps = null;
 
         try {
-            String sql = "INSERT INTO Location  VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO Location  VALUES (null,?,?,?,?)";
             ps = con.prepareStatement(sql);
-            ps.setInt(1,id);
-            ps.setString(2,builname);
-            ps.setString(3,roname);
-            ps.setInt(4,capacity);
-            ps.setString(5,roomType);
+            ps.setString(1,builname);
+            ps.setString(2,roname);
+            ps.setInt(3,capacity);
+            ps.setString(4,roomType);
             ps.execute();
             System.out.println("Data added successfully !!!!!");
 
@@ -151,9 +177,45 @@ public class LocationController {
         }
 
 
+        alert(null);
+
+        locationManage(null);
+
     }
 
 
+    public void ClearFields(ActionEvent event) {
+
+        capacity.clear();
+        bname.clear();
+        rname.clear();
+
+    }
+
+
+    @FXML
+    private void alert(ActionEvent event){
+
+        Alert al = new Alert(Alert.AlertType.INFORMATION);
+        al.setTitle("Successful");
+        al.setContentText("Your Record Add to System");
+        al.setHeaderText(null);
+        al.showAndWait();
+
+
+    }
+
+    @FXML
+    private void alertError(String text,ActionEvent event){
+
+        Alert al = new Alert(Alert.AlertType.ERROR);
+        al.setTitle("ERROR");
+        al.setContentText(text);
+        al.setHeaderText(null);
+        al.showAndWait();
+
+
+    }
 
 
 
