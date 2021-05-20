@@ -2,15 +2,21 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
-  fx:controller="org.TeamCipher.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.PrimaryController">
 
    <!--Change Controller accordingly up here^^ -->
 
@@ -144,5 +150,48 @@
             </Button>
          </children>
       </VBox>
+      <Pane layoutX="328.0" layoutY="201.0" prefHeight="348.0" prefWidth="852.0">
+         <children>
+            <Text layoutX="60.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Lecturer" wrappingWidth="201.46484375" />
+            <Text layoutX="60.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Group" wrappingWidth="201.46484375" />
+            <Text layoutX="60.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Sub Group" wrappingWidth="201.46484375" />
+            <Text layoutX="60.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select session ID" wrappingWidth="201.46484375" />
+            <SplitMenuButton layoutX="343.0" layoutY="33.0" mnemonicParsing="false" text="SplitMenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem mnemonicParsing="false" text="Action 2" />
+              </items>
+            </SplitMenuButton>
+            <SplitMenuButton layoutX="343.0" layoutY="68.0" mnemonicParsing="false" text="SplitMenuButton">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton layoutX="343.0" layoutY="105.0" mnemonicParsing="false" text="SplitMenuButton">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton layoutX="343.0" layoutY="140.0" mnemonicParsing="false" text="SplitMenuButton">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <Text layoutX="60.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date" wrappingWidth="201.46484375" />
+            <DatePicker layoutX="343.0" layoutY="196.0" prefHeight="25.0" prefWidth="201.0" />
+            <Text layoutX="60.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" wrappingWidth="201.46484375" />
+            <Spinner layoutX="343.0" layoutY="240.0" prefHeight="25.0" prefWidth="88.0" />
+            <Spinner layoutX="450.0" layoutY="240.0" prefHeight="25.0" prefWidth="88.0" />
+            <Text layoutX="60.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sub Group ID" wrappingWidth="201.46484375" />
+            <TextField layoutX="343.0" layoutY="285.0" prefHeight="25.0" prefWidth="201.0" />
+         </children>
+      </Pane>
+      <Text layoutX="641.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Not Available Time Of Lecturers" wrappingWidth="201.46484375" />
+      <Button layoutX="682.0" layoutY="626.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="View" />
+      <Button layoutX="807.0" layoutY="626.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Clear" />
+      <Button layoutX="932.0" layoutY="626.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Submit" />
    </children>
 </AnchorPane>

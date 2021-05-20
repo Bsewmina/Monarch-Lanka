@@ -1,14 +1,14 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
 
-public class PrimaryController {
+public class NotAvailableTimeOfLecturersController {
 
     //------------------------------------------------------------------------------------------
 
@@ -39,10 +39,9 @@ public class PrimaryController {
         mainLabel.setText("logout Clicked");
     }
 
-    public void session(ActionEvent event) throws IOException {
+    public void session(ActionEvent event) {
 
         mainLabel.setText("session Clicked");
-        App.setRoot("NewSession");
     }
 
     public void statistic(ActionEvent event) {
