@@ -1,0 +1,16 @@
+org\TeamCipher\AddSessionController2.class
+org\TeamCipher\LecturerManagmentController.class
+org\TeamCipher\ManageSessionController.class
+org\TeamCipher\NewLecturerController.class
+org\TeamCipher\StudentExistingController.class
+org\TeamCipher\AddSessionController.class
+org\TeamCipher\NewSubjectController.class
+org\TeamCipher\TagsMenuController.class
+org\TeamCipher\Tag.class
+org\TeamCipher\AddTagsController.class
+org\TeamCipher\ModelSubjectTable.class
+org\TeamCipher\AddGroupController.class
+org\TeamCipher\SubjectManagmentController.class
+org\TeamCipher\TagsExistingController.class
+org\TeamCipher\ModelLecturerTable.class
+org\TeamCipher\StudentGroupsMenuController.class
