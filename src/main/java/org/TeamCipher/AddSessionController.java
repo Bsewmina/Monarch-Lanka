@@ -1,22 +1,24 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
+public class AddSessionController {
 
     //------------------------------------------------------------------------------------------
 
     @FXML
     private Label mainLabel;
     @FXML
-    private ImageView logo;
-    //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
+    private TextField txtField_lecturer1,txtField_lecturer2;
+
+
+
 
     public void Subject(ActionEvent event) throws IOException {
 
@@ -38,10 +40,9 @@ public class PrimaryController {
         mainLabel.setText("logout Clicked");
     }
 
-    public void session(ActionEvent event) throws IOException {
+    public void session(ActionEvent event) {
 
         mainLabel.setText("session Clicked");
-        App.setRoot("manageRoom");
     }
 
     public void statistic(ActionEvent event) throws IOException {
@@ -55,7 +56,7 @@ public class PrimaryController {
     }
 
     public void location(ActionEvent event ) throws IOException {
-        App.setRoot("AddSession1");
+        App.setRoot("location");
     }
 
     public void tags(ActionEvent event) {
@@ -64,9 +65,8 @@ public class PrimaryController {
     }
 
     public void timeTables(ActionEvent event) throws IOException {
-        App.setRoot("ManageSession");
+
 
     }
     //------------------------------------------------------------------------------------------
 }
-
