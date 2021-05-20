@@ -18,9 +18,9 @@ public class PrimaryController {
     private ImageView logo;
     //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
 
-    public void Subject(ActionEvent event) {
+    public void Subject(ActionEvent event) throws IOException {
 
-        mainLabel.setText("Subject Clicked");
+        App.setRoot("Subject_Managment");
     }
 
     public void WorkingDH(ActionEvent event) {

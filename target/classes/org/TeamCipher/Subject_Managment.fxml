@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -7,9 +9,11 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -164,23 +168,23 @@
                                         <Font size="12.0" />
                                     </font>
                                 </Button>
-                                <Button layoutX="602.0" layoutY="1054.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Save Details">
+                                <Button layoutX="602.0" layoutY="1054.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-background-color: #5F95F0;" text="Save Details" textFill="WHITE">
                                     <font>
-                                        <Font size="12.0" />
+                                        <Font name="System Bold" size="12.0" />
                                     </font>
                                 </Button>
                                 <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="1172.0" prefWidth="969.0">
                                     <children>
                                         <ScrollPane prefHeight="1176.0" prefWidth="969.0">
                                             <content>
-                                                <Pane prefHeight="1138.0" prefWidth="952.0">
+                                                <Pane prefHeight="1138.0" prefWidth="953.0">
                                                     <children>
                                           <Label layoutX="218.0" layoutY="631.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Offered Semester">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="220.0" layoutY="582.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Offered Year">
+                                          <Label fx:id="tx" layoutX="220.0" layoutY="582.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="Offered Year">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -210,23 +214,35 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <ChoiceBox layoutX="498.0" layoutY="580.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" />
-                                          <RadioButton layoutX="498.0" layoutY="622.0" mnemonicParsing="false" text="1 st Semester">
+                                          <ChoiceBox fx:id="choiceBox_year" layoutX="498.0" layoutY="580.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+                                              <items>
+                                                  <FXCollections fx:factory="observableArrayList">
+                                                      <String fx:value="1" />
+                                                      <String fx:value="2" />
+                                                      <String fx:value="3" />
+                                                      <String fx:value="4" />
+                                                  </FXCollections>
+                                              </items>
+                                          </ChoiceBox>
+                                          <RadioButton fx:id="rButton1" layoutX="498.0" layoutY="622.0" mnemonicParsing="false" onAction="#getSemester" text="1 st Semester">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="semester" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="rButton2" layoutX="616.0" layoutY="622.0" mnemonicParsing="false" onAction="#getSemester" prefHeight="21.0" prefWidth="114.0" text="2 nd Semester" toggleGroup="$semester">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </RadioButton>
-                                          <RadioButton layoutX="616.0" layoutY="622.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="114.0" text="2 nd Semester">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </RadioButton>
-                                          <TextField layoutX="498.0" layoutY="669.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+                                          <TextField fx:id="txtField_subName" layoutX="498.0" layoutY="669.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </TextField>
-                                          <TextField layoutX="498.0" layoutY="731.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
+                                          <TextField fx:id="txt_Field_subCode" layoutX="498.0" layoutY="731.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="1.0" minWidth="1.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -236,25 +252,51 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </Label>
-                                          <Spinner layoutX="584.0" layoutY="782.0" />
-                                          <Spinner layoutX="584.0" layoutY="831.0" />
-                                          <Spinner layoutX="584.0" layoutY="881.0" />
-                                          <Spinner layoutX="584.0" layoutY="931.0" />
-                                          <Button layoutX="190.0" layoutY="1050.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Clear">
+                                          <Spinner fx:id="spinner_noLecHours" editable="true" layoutX="584.0" layoutY="782.0">
+                                              <valueFactory>
+                                                  <SpinnerValueFactory.IntegerSpinnerValueFactory max="3" min="0" />
+                                              </valueFactory>
+                                          </Spinner>
+                                          <Spinner fx:id="spinner_noTutHours" layoutX="584.0" layoutY="831.0">
+                                              <valueFactory>
+                                                  <SpinnerValueFactory.IntegerSpinnerValueFactory max="3" min="0" />
+                                              </valueFactory>
+                                          </Spinner>
+                                          <Spinner fx:id="spinner_noLabHours" layoutX="584.0" layoutY="881.0">
+                                              <valueFactory>
+                                                  <SpinnerValueFactory.IntegerSpinnerValueFactory max="3" min="0" />
+                                              </valueFactory>
+                                          </Spinner>
+                                          <Spinner fx:id="spinner_noEvalHours" layoutX="584.0" layoutY="931.0">
+                                              <valueFactory>
+                                                  <SpinnerValueFactory.IntegerSpinnerValueFactory max="3" min="0" />
+                                              </valueFactory>
+                                          </Spinner>
+                                          <Button layoutX="190.0" layoutY="1050.0" mnemonicParsing="false" onAction="#Clear" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Clear">
                                              <font>
                                                 <Font size="12.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="430.0" layoutY="1050.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Delete">
+                                          <Button layoutX="430.0" layoutY="1050.0" mnemonicParsing="false" onAction="#Delete" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-background-color: #f05f5f;" text="Delete" textFill="WHITE">
                                              <font>
                                                 <Font size="12.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="650.0" layoutY="1050.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Update">
+                                          <Button layoutX="650.0" layoutY="1050.0" mnemonicParsing="false" onAction="#Update" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-background-color: #5f95f0;" text="Update" textFill="WHITE">
                                              <font>
-                                                <Font size="12.0" />
+                                                <Font name="System Bold" size="12.0" />
                                              </font>
                                           </Button>
+                                          <Label fx:id="tx1" layoutX="220.0" layoutY="534.0" mnemonicParsing="true" prefHeight="25.0" prefWidth="230.0" text="ID">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="btnID" alignment="CENTER" editable="false" layoutX="501.0" layoutY="532.0" prefHeight="26.0" prefWidth="225.0" style="-fx-background-radius: 3;">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
                                                     </children>
                                                 </Pane>
                                             </content></ScrollPane>
@@ -262,20 +304,20 @@
                                 </AnchorPane>
                             </children>
                         </Pane>
-                  <TableView layoutX="-5.0" layoutY="3.0" prefHeight="500.0" prefWidth="983.0">
+                  <TableView fx:id="subjectTable" layoutX="4.0" layoutY="3.0" onMouseClicked="#selectRow" prefHeight="501.0" prefWidth="975.0">
                      <columns>
-                        <TableColumn prefWidth="191.0" text="ID" />
-                        <TableColumn prefWidth="191.0" text="Subject Name" />
-                        <TableColumn prefWidth="191.0" text="Subject Code" />
-                        <TableColumn prefWidth="191.0" text="Offered Year" />
-                        <TableColumn prefWidth="191.0" text="Offered Semester" />
+                        <TableColumn fx:id="subId" editable="false" prefWidth="191.0" text="ID" />
+                        <TableColumn fx:id="subName" prefWidth="191.0" text="Subject Name" />
+                        <TableColumn fx:id="subCode" prefWidth="191.0" text="Subject Code" />
+                        <TableColumn fx:id="subYear" prefWidth="191.0" text="Offered Year" />
+                        <TableColumn fx:id="sem" prefWidth="191.0" text="Offered Semester" />
                      </columns>
                   </TableView>
                     </children>
                 </AnchorPane>
             </content>
         </ScrollPane>
-        <Button layoutX="306.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="142.0" style="-fx-background-radius: 5;" text="Add Lecturer">
+        <Button fx:id="btnAddSubject" layoutX="306.0" layoutY="13.0" mnemonicParsing="false" onAction="#addSubject" prefHeight="26.0" prefWidth="142.0" style="-fx-background-radius: 5; -fx-background-color: #6ACE6D;" text="Add Subject" textFill="WHITE">
             <font>
                 <Font size="14.0" />
             </font>
