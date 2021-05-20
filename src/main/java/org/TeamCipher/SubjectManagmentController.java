@@ -29,7 +29,7 @@ public class SubjectManagmentController implements Initializable {
     private TextField txtField_subName,txt_Field_subCode,btnID;
 
     @FXML
-    private Spinner<?> spinner_noLecHours,spinner_noTutHours,spinner_noLabHours,spinner_noEvalHours;
+    private Spinner<Integer> spinner_noLecHours,spinner_noTutHours,spinner_noLabHours,spinner_noEvalHours;
 
     @FXML
     private ChoiceBox<?> choiceBox_year;
@@ -111,6 +111,11 @@ public class SubjectManagmentController implements Initializable {
     public void Clear(ActionEvent event) {
         txtField_subName.setText("");
         txt_Field_subCode.setText("");
+        spinner_noLecHours.getValueFactory().setValue(0);
+        spinner_noTutHours.getValueFactory().setValue(0);
+        spinner_noLabHours.getValueFactory().setValue(0);
+        spinner_noEvalHours.getValueFactory().setValue(0);
+        btnID.setText(null);
     }
 
     public void Delete(ActionEvent event) {

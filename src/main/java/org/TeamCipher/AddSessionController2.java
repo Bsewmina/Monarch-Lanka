@@ -1,15 +1,13 @@
 package org.TeamCipher;
 
-import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+
 import java.io.IOException;
 
-
-public class PrimaryController {
-
+public class AddSessionController2 {
     //------------------------------------------------------------------------------------------
 
     @FXML
@@ -54,7 +52,7 @@ public class PrimaryController {
     }
 
     public void location(ActionEvent event ) throws IOException {
-        App.setRoot("AddSession1");
+        App.setRoot("location");
     }
 
     public void tags(ActionEvent event) {
@@ -63,9 +61,8 @@ public class PrimaryController {
     }
 
     public void timeTables(ActionEvent event) throws IOException {
-        App.setRoot("ManageSession");
+
 
     }
     //------------------------------------------------------------------------------------------
 }
-
