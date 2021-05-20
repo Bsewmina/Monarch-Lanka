@@ -1,0 +1,178 @@
+Index: src/main/java/org/TeamCipher/PrimaryController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.TeamCipher;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.image.ImageView;\r\nimport java.io.IOException;\r\n\r\n\r\npublic class PrimaryController {\r\n\r\n    //------------------------------------------------------------------------------------------\r\n\r\n    @FXML\r\n    private Label mainLabel;\r\n    @FXML\r\n    private ImageView logo;\r\n    //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;\r\n\r\n    public void Subject(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"Subject Clicked\");\r\n    }\r\n\r\n    public void WorkingDH(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"WorkingDH Clicked\");\r\n    }\r\n\r\n    public void lecturers(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"lecturers Clicked\");\r\n    }\r\n\r\n    public void logout(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"logout Clicked\");\r\n    }\r\n\r\n    public void session(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"session Clicked\");\r\n    }\r\n\r\n    public void statistic(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"statistics Clicked\");\r\n    }\r\n\r\n    public void studentGoups(ActionEvent event) throws IOException {\r\n        App.setRoot(\"student_groups_menu\");\r\n    }\r\n\r\n    public void location(ActionEvent event ){\r\n        mainLabel.setText(\"location Clicked\");\r\n    }\r\n\r\n    public void tags(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"tags Clicked\");\r\n    }\r\n\r\n    public void timeTables(ActionEvent event) {\r\n\r\n        mainLabel.setText(\"Time Table Clicked\");\r\n\r\n    }\r\n    //------------------------------------------------------------------------------------------\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/TeamCipher/PrimaryController.java b/src/main/java/org/TeamCipher/PrimaryController.java
+--- a/src/main/java/org/TeamCipher/PrimaryController.java	(revision e4f7605ffad795828b967080be553cac2b29e741)
++++ b/src/main/java/org/TeamCipher/PrimaryController.java	(date 1621412684960)
+@@ -43,17 +43,18 @@
+         mainLabel.setText("session Clicked");
+     }
+ 
+-    public void statistic(ActionEvent event) {
++    public void statistic(ActionEvent event) throws IOException {
+ 
+         mainLabel.setText("statistics Clicked");
++        App.setRoot("statistic");
+     }
+ 
+     public void studentGoups(ActionEvent event) throws IOException {
+         App.setRoot("student_groups_menu");
+     }
+ 
+-    public void location(ActionEvent event ){
+-        mainLabel.setText("location Clicked");
++    public void location(ActionEvent event ) throws IOException {
++        App.setRoot("location");
+     }
+ 
+     public void tags(ActionEvent event) {
+Index: src/main/java/module-info.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>module org.TeamCipher {\r\n    requires javafx.controls;\r\n    requires javafx.fxml;\r\n\r\n    opens org.TeamCipher to javafx.fxml;\r\n    exports org.TeamCipher;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/module-info.java b/src/main/java/module-info.java
+--- a/src/main/java/module-info.java	(revision e4f7605ffad795828b967080be553cac2b29e741)
++++ b/src/main/java/module-info.java	(date 1621412565945)
+@@ -1,6 +1,7 @@
+ module org.TeamCipher {
+     requires javafx.controls;
+     requires javafx.fxml;
++    requires java.sql;
+ 
+     opens org.TeamCipher to javafx.fxml;
+     exports org.TeamCipher;
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"ALL\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b7fbec4e-1ea8-4547-a30b-5d24baa47cd6\" name=\"Default Changelist\" comment=\"Homepage Updated v3\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/TeamCipher/LectureManagementsController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/TeamCipher/LectureManagementsController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"DefaultGradleProjectSettings\">\r\n    <option name=\"testRunner\" value=\"GRADLE\" />\r\n    <option name=\"delegatedBuild\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"SEMINA\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n  </component>\r\n  <component name=\"MavenProjectNavigator\">\r\n    <treeState>\r\n      <expand>\r\n        <path>\r\n          <item name=\"\" type=\"16c1761:MavenProjectsStructure$RootNode\" />\r\n          <item name=\"TimeTableMngFX\" type=\"9519ce18:MavenProjectsStructure$ProjectNode\" />\r\n        </path>\r\n        <path>\r\n          <item name=\"\" type=\"16c1761:MavenProjectsStructure$RootNode\" />\r\n          <item name=\"TimeTableMngFX\" type=\"9519ce18:MavenProjectsStructure$ProjectNode\" />\r\n          <item name=\"Plugins\" type=\"7aea1407:MavenProjectsStructure$PluginsNode\" />\r\n        </path>\r\n        <path>\r\n          <item name=\"\" type=\"16c1761:MavenProjectsStructure$RootNode\" />\r\n          <item name=\"TimeTableMngFX\" type=\"9519ce18:MavenProjectsStructure$ProjectNode\" />\r\n          <item name=\"Plugins\" type=\"7aea1407:MavenProjectsStructure$PluginsNode\" />\r\n          <item name=\"compiler\" type=\"36feed69:MavenProjectsStructure$PluginNode\" />\r\n        </path>\r\n        <path>\r\n          <item name=\"\" type=\"16c1761:MavenProjectsStructure$RootNode\" />\r\n          <item name=\"TimeTableMngFX\" type=\"9519ce18:MavenProjectsStructure$ProjectNode\" />\r\n          <item name=\"Plugins\" type=\"7aea1407:MavenProjectsStructure$PluginsNode\" />\r\n          <item name=\"javafx\" type=\"36feed69:MavenProjectsStructure$PluginNode\" />\r\n        </path>\r\n      </expand>\r\n      <select />\r\n    </treeState>\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectFrameBounds\" extendedState=\"6\">\r\n    <option name=\"x\" value=\"-12\" />\r\n    <option name=\"y\" value=\"-12\" />\r\n    <option name=\"width\" value=\"1615\" />\r\n    <option name=\"height\" value=\"879\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1qCZ1z7EIMndgeYmdG1dR0zt7ql\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectView\">\r\n    <navigator proportions=\"\" version=\"1\">\r\n      <foldersAlwaysOnTop value=\"true\" />\r\n    </navigator>\r\n    <panes>\r\n      <pane id=\"ProjectPane\">\r\n        <subPane>\r\n          <expand>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"java\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"TeamCipher\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"resources\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"MonarchLanaka\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"MonarchLanaka\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"src\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"main\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"resources\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"TeamCipher\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n          </expand>\r\n          <select />\r\n        </subPane>\r\n      </pane>\r\n      <pane id=\"Scope\" />\r\n      <pane id=\"PackagesPane\" />\r\n    </panes>\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\r\n    <property name=\"last_directory_selection\" value=\"$PROJECT_DIR$/src/main/java/org/TeamCipher\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/src/main/resources/images\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"vcs.Git\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\src\\main\\resources\\images\" />\r\n      <recent name=\"F:\\ITPM 2021\\Main Files\\src\\main\\resources\\images\" />\r\n      <recent name=\"F:\\ITPM 2021\\Main Files\\src\\main\\resources\\org\\TeamCipher\" />\r\n      <recent name=\"F:\\ITPM 2021\\Monarch-Lanka\\src\\main\\resources\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"ArquillianJUnit\" factoryName=\"\" nameIsGenerated=\"true\">\r\n      <option name=\"arquillianRunConfiguration\">\r\n        <value>\r\n          <option name=\"containerStateName\" value=\"\" />\r\n        </value>\r\n      </option>\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b7fbec4e-1ea8-4547-a30b-5d24baa47cd6\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1616574786323</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1616574786323</updated>\r\n      <workItem from=\"1616574787666\" duration=\"3565000\" />\r\n      <workItem from=\"1616826702904\" duration=\"15779000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"testing\">\r\n      <created>1617722461959</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617722461960</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"testing\">\r\n      <created>1617722855159</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617722855159</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"testing\">\r\n      <created>1617723131504</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617723131504</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Homepage Updated v3\">\r\n      <created>1617728509927</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1617728509927</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TimeTrackingManager\">\r\n    <option name=\"totallyTimeSpent\" value=\"3565000\" />\r\n  </component>\r\n  <component name=\"ToolWindowManager\">\r\n    <frame x=\"-7\" y=\"-7\" width=\"1753\" height=\"956\" extended-state=\"6\" />\r\n    <layout>\r\n      <window_info id=\"Image Layers\" />\r\n      <window_info id=\"Designer\" />\r\n      <window_info id=\"UI Designer\" />\r\n      <window_info id=\"Capture Tool\" />\r\n      <window_info id=\"Favorites\" side_tool=\"true\" />\r\n      <window_info active=\"true\" content_ui=\"combo\" id=\"Project\" order=\"0\" visible=\"true\" weight=\"0.24955752\" />\r\n      <window_info id=\"Structure\" order=\"1\" side_tool=\"true\" weight=\"0.25\" />\r\n      <window_info anchor=\"bottom\" id=\"Messages\" weight=\"0.32969698\" />\r\n      <window_info anchor=\"bottom\" id=\"Docker\" show_stripe_button=\"false\" />\r\n      <window_info anchor=\"bottom\" id=\"Database Changes\" />\r\n      <window_info anchor=\"bottom\" id=\"Version Control\" />\r\n      <window_info anchor=\"bottom\" id=\"Terminal\" />\r\n      <window_info anchor=\"bottom\" id=\"Event Log\" side_tool=\"true\" />\r\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"0\" />\r\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"1\" />\r\n      <window_info anchor=\"bottom\" id=\"Run\" order=\"2\" weight=\"0.32969698\" />\r\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"3\" weight=\"0.4\" />\r\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"4\" weight=\"0.25\" />\r\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"5\" weight=\"0.4\" />\r\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"6\" />\r\n      <window_info anchor=\"right\" id=\"Palette\" />\r\n      <window_info anchor=\"right\" id=\"Theme Preview\" />\r\n      <window_info anchor=\"right\" id=\"Maven\" visible=\"true\" weight=\"0.3297935\" />\r\n      <window_info anchor=\"right\" id=\"Capture Analysis\" />\r\n      <window_info anchor=\"right\" id=\"Palette&#9;\" />\r\n      <window_info anchor=\"right\" id=\"Database\" />\r\n      <window_info anchor=\"right\" id=\"Commander\" internal_type=\"SLIDING\" order=\"0\" type=\"SLIDING\" weight=\"0.4\" />\r\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\r\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\r\n    </layout>\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Homepage Created\" />\r\n    <MESSAGE value=\"testing\" />\r\n    <MESSAGE value=\"Homepage Updated v3\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Homepage Updated v3\" />\r\n  </component>\r\n  <component name=\"editorHistoryManager\">\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/module-info.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/pom.xml\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"688\">\r\n          <caret line=\"43\" column=\"10\" selection-start-line=\"43\" selection-start-column=\"10\" selection-end-line=\"43\" selection-end-column=\"10\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/org/TeamCipher/SecondaryController.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"64\">\r\n          <caret line=\"5\" column=\"13\" selection-start-line=\"5\" selection-start-column=\"13\" selection-end-line=\"5\" selection-end-column=\"13\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"64\">\r\n          <caret line=\"5\" column=\"13\" selection-start-line=\"5\" selection-start-column=\"13\" selection-end-line=\"5\" selection-end-column=\"13\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/java/org/TeamCipher/App.java\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"256\">\r\n          <caret line=\"22\" column=\"5\" selection-start-line=\"22\" selection-start-column=\"5\" selection-end-line=\"22\" selection-end-column=\"5\" />\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/src/main/resources/org/TeamCipher/primary.fxml\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"256\">\r\n          <caret line=\"16\" lean-forward=\"true\" selection-start-line=\"16\" selection-end-line=\"16\" />\r\n        </state>\r\n      </provider>\r\n      <provider editor-type-id=\"JavaFX-Scene-Builder\" />\r\n    </entry>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision e4f7605ffad795828b967080be553cac2b29e741)
++++ b/.idea/workspace.xml	(date 1621412685030)
+@@ -5,8 +5,15 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="b7fbec4e-1ea8-4547-a30b-5d24baa47cd6" name="Default Changelist" comment="Homepage Updated v3">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LectureManagementsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/LectureManagementsController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TeamCipher/PrimaryController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/images/student groups.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/images/subject1.png" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/LectureManagementsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/LectureManagementsController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/org/TeamCipher/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/TeamCipher/PrimaryController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -156,20 +163,37 @@
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/org/TeamCipher" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/images" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/org/TeamCipher" />
+     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+   </component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="D:\Working_ Projects\new_git\src\main\resources\org\TeamCipher" />
+       <recent name="C:\Users\SEMINA\IdeaProjects\Monarch-Lanka\src\main\resources\images" />
+       <recent name="F:\ITPM 2021\Main Files\src\main\resources\images" />
+       <recent name="F:\ITPM 2021\Main Files\src\main\resources\org\TeamCipher" />
+       <recent name="F:\ITPM 2021\Monarch-Lanka\src\main\resources" />
++    </key>
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="org.TeamCipher" />
+     </key>
+   </component>
+   <component name="RunManager">
++    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="org.TeamCipher.App" />
++      <module name="TimeTableMngFX" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="org.TeamCipher.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+       <option name="arquillianRunConfiguration">
+         <value>
+@@ -181,6 +205,11 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.App" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+@@ -195,6 +224,8 @@
+       <updated>1616574786323</updated>
+       <workItem from="1616574787666" duration="3565000" />
+       <workItem from="1616826702904" duration="15779000" />
++      <workItem from="1621407695347" duration="889000" />
++      <workItem from="1621412313038" duration="372000" />
+     </task>
+     <task id="LOCAL-00001" summary="testing">
+       <created>1617722461959</created>
+Index: target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>C:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\src\\main\\java\\org\\TeamCipher\\LecturerManagment.java\r\nC:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\src\\main\\java\\module-info.java\r\nC:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\src\\main\\java\\org\\TeamCipher\\SecondaryController.java\r\nC:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\src\\main\\java\\org\\TeamCipher\\PrimaryController.java\r\nC:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\src\\main\\java\\org\\TeamCipher\\App.java\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+--- a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(revision e4f7605ffad795828b967080be553cac2b29e741)
++++ b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(date 1621412715735)
+@@ -1,5 +1,9 @@
+-C:\Users\SEMINA\IdeaProjects\Monarch-Lanka\src\main\java\org\TeamCipher\LecturerManagment.java
+-C:\Users\SEMINA\IdeaProjects\Monarch-Lanka\src\main\java\module-info.java
+-C:\Users\SEMINA\IdeaProjects\Monarch-Lanka\src\main\java\org\TeamCipher\SecondaryController.java
+-C:\Users\SEMINA\IdeaProjects\Monarch-Lanka\src\main\java\org\TeamCipher\PrimaryController.java
+-C:\Users\SEMINA\IdeaProjects\Monarch-Lanka\src\main\java\org\TeamCipher\App.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\App.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\Location.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\manageController.java
++D:\Working_ Projects\new_git\src\main\java\module-info.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\SQliteConnection.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\PrimaryController.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\LectureManagementsController.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\SecondaryController.java
++D:\Working_ Projects\new_git\src\main\java\org\TeamCipher\LocationController.java
+Index: target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>org\\TeamCipher\\LectureManagementsController.class\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+--- a/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst	(revision e4f7605ffad795828b967080be553cac2b29e741)
++++ b/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst	(date 1621412716300)
+@@ -1,1 +1,5 @@
++org\TeamCipher\LocationController.class
++org\TeamCipher\manageController.class
++org\TeamCipher\SQliteConnection.class
+ org\TeamCipher\LectureManagementsController.class
++org\TeamCipher\Location.class
