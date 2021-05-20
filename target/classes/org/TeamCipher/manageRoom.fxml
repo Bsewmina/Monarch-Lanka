@@ -3,16 +3,17 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.LocationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.manageRoomController">
 
     <!--Change Controller accordingly up here^^ -->
 
@@ -146,56 +147,65 @@
                 </Button>
             </children>
         </VBox>
-        <Button id="student_menu_btn" fx:id="save" layoutX="735.0" layoutY="579.0" mnemonicParsing="false" onAction="#InsertData" prefHeight="32.0" prefWidth="131.0" style="-fx-background-color: #4ff792;" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Save Details" textFill="#fff9f9">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Button>
-        <Button id="student_menu_btn" fx:id="clear" layoutX="576.0" layoutY="579.0" mnemonicParsing="false" onAction="#ClearFields" prefHeight="32.0" prefWidth="139.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Clear Fields">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Button>
-        <Label layoutX="308.0" layoutY="112.0" prefHeight="17.0" prefWidth="220.0" text="*Add rooms building wise " />
-        <Label layoutX="546.0" layoutY="210.0" text="Building Name">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Label layoutX="546.0" layoutY="269.0" text="Room Name">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Label layoutX="547.0" layoutY="339.0" text="Room Type">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <Label layoutX="548.0" layoutY="441.0" text="Capacity">
-            <font>
-                <Font size="14.0" />
-            </font>
-        </Label>
-        <RadioButton fx:id="lhall" layoutX="693.0" layoutY="341.0" mnemonicParsing="false" text="Lecture Hall">
-         <toggleGroup>
-            <ToggleGroup fx:id="type" />
-         </toggleGroup></RadioButton>
-        <RadioButton fx:id="lab" layoutX="695.0" layoutY="385.0" mnemonicParsing="false" text="Laboratory" toggleGroup="$type" />
-        <TextField fx:id="bname" layoutX="678.0" layoutY="208.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 10;">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-        </TextField>
-        <TextField fx:id="rname" layoutX="678.0" layoutY="267.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 10;">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-        </TextField>
-        <TextField fx:id="capacity" layoutX="684.0" layoutY="439.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 10;">
-            <opaqueInsets>
-                <Insets />
-            </opaqueInsets>
-        </TextField>
+      <Button id="student_menu_btn" layoutX="548.0" layoutY="572.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Refresh">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="student_menu_btn" fx:id="save" layoutX="760.0" layoutY="572.0" mnemonicParsing="false" onAction="#switchToNewLocation" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #4ff792;" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Add Room">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="288.0" layoutY="155.0" prefHeight="348.0" prefWidth="808.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Sessions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="756.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="326.0" prefWidth="808.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="104.0" text="ID" />
+                            <TableColumn fx:id="session" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room" prefWidth="168.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails" prefWidth="331.0" text="Session Details" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Consecutive">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView1" prefHeight="326.0" prefWidth="808.0">
+                           <columns>
+                              <TableColumn fx:id="id1" prefWidth="104.0" text="ID" />
+                              <TableColumn fx:id="session1" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room1" prefWidth="230.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails1" prefWidth="269.0" text="Session Details" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Non-available Times">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView2" prefHeight="326.0" prefWidth="808.0">
+                           <columns>
+                              <TableColumn fx:id="id2" prefWidth="104.0" text="ID" />
+                              <TableColumn fx:id="session2" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room2" prefWidth="230.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails2" prefWidth="269.0" text="Session Details" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
     </children>
 </AnchorPane>
