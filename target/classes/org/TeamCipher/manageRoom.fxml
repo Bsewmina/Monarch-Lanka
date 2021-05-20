@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.manageRoomController">
+
+    <!--Change Controller accordingly up here^^ -->
+
+
+    <children>
+        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <padding>
+                <Insets right="40.0" />
+            </padding>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <VBox prefHeight="699.0" prefWidth="264.0" style="-fx-background-color: #1F203C;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fx:id="logo" cache="true" fitHeight="210.0" fitWidth="191.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/logo2.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="33.0" top="20.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Button fx:id="btnTimetables" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#timeTables" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Timetables" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/timetable.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnLecturers" alignment="TOP_LEFT" cache="true" graphicTextGap="30.0" mnemonicParsing="false" onAction="#lecturers" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Lecturers" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/lecturer.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSubject" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="311.0" mnemonicParsing="false" onAction="#Subject" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Subjects" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" scaleX="1.1" scaleY="1.1">
+                            <image>
+                                <Image url="@../../images/subject.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnStudentGroups" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#studentGoups" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Student Groups" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/student_groups.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnLocation" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="10.0" layoutY="409.0" mnemonicParsing="false" onAction="#location" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Location" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.81" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
+                            <image>
+                                <Image url="@../../images/locations2.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnTag" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#tags" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Tags" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" opacity="0.93" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/tags~1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnWorking" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#WorkingDH" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Working D/H" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/wd.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnStatistic" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#statistic" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Statistics" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/stats.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSession" alignment="TOP_LEFT" graphicTextGap="30.0" mnemonicParsing="false" onAction="#session" prefHeight="50.0" prefWidth="264.0" stylesheets="@../../css/primary.css" text="Sessions" textAlignment="RIGHT" textFill="#bebec3">
+                    <graphic>
+                        <ImageView cache="true" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/session.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="55.0" top="10.0" />
+                    </padding>
+                </Button>
+            </children>
+        </VBox>
+      <Button id="student_menu_btn" layoutX="548.0" layoutY="572.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Refresh">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="student_menu_btn" fx:id="save" layoutX="760.0" layoutY="572.0" mnemonicParsing="false" onAction="#switchToNewLocation" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #4ff792;" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Add Room">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TabPane layoutX="288.0" layoutY="155.0" prefHeight="348.0" prefWidth="808.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Sessions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="756.0">
+                     <children>
+                        <TableView fx:id="tableView" prefHeight="326.0" prefWidth="808.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="104.0" text="ID" />
+                            <TableColumn fx:id="session" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room" prefWidth="168.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails" prefWidth="331.0" text="Session Details" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Consecutive">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView1" prefHeight="326.0" prefWidth="808.0">
+                           <columns>
+                              <TableColumn fx:id="id1" prefWidth="104.0" text="ID" />
+                              <TableColumn fx:id="session1" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room1" prefWidth="230.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails1" prefWidth="269.0" text="Session Details" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Non-available Times">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView2" prefHeight="326.0" prefWidth="808.0">
+                           <columns>
+                              <TableColumn fx:id="id2" prefWidth="104.0" text="ID" />
+                              <TableColumn fx:id="session2" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room2" prefWidth="230.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails2" prefWidth="269.0" text="Session Details" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
