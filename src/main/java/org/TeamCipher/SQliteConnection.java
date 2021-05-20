@@ -3,25 +3,21 @@ package org.TeamCipher;
 import java.sql.*;
 
 public class SQliteConnection {
-    public static Connection DBconnect(){
+
+    public static Connection DBconnect() {
 
         Connection con = null;
-
-        try{
-
-            Class.forName("org.sqlite.JDBC");//identifier
-            con = DriverManager.getConnection("jdbc:sqlite:D:/Working Project/morch-lanka/identifier.sqlite");
-            System.out.println("-----------------------------------Connected to Database---------------------------------");
-
-
-        }catch(ClassNotFoundException | SQLException e){
-
-
-            System.out.println(e);
-            System.out.println("-------------------------------------Connection error");
-
+        try {
+            Class.forName("org.sqlite.JDBC");
+            con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\CHAMOD\\Desktop\\database.db");
+            System.out.print("---------##### Connected databaseee ####------");
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.print(e);
+            System.out.print("------------------Connection error---------------------");
         }
 
         return con;
     }
+
+
 }

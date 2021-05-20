@@ -1,0 +1,74 @@
+/*                                                  Delete button */
+
+.ex_delete{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+}
+.ex_delete:hover{
+    -fx-background-color: #FF2B2B;
+    -fx-border-color: #FF2B2B;
+    -fx-cursor: hand;
+    -fx-text-fill: White;
+}
+
+.ex_delete:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: gray;
+}
+
+/*                                                  Update button */
+
+.ex_update{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-text-fill: Black;
+}
+.ex_update:hover{
+    -fx-background-color: #3BD08B;
+    -fx-border-color: #3BD08B;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+
+}
+
+.ex_update:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+
+}
+
+/*                                                   Clear button */
+
+.ex_clear{
+
+    -fx-background-color: transparent;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-text-fill: Black;
+}
+.ex_clear:hover{
+    -fx-background-color: transparent;
+    -fx-border-color: #005BB7;
+    -fx-cursor: hand;
+    -fx-text-fill: #005BB7;
+
+}
+
+.ex_clear:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: white;
+
+}
