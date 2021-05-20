@@ -50,23 +50,23 @@ public class PrimaryController {
         App.setRoot("statistic");
     }
 
-    public void studentGoups(ActionEvent event) {
-
+    public void studentGoups(ActionEvent event) throws IOException {
+        App.setRoot("student_groups_menu");
     }
 
     public void location(ActionEvent event ) throws IOException {
         App.setRoot("AddSession1");
     }
 
-    public void tags(ActionEvent event) {
-
-        mainLabel.setText("tags Clicked");
+    public void tags(ActionEvent event) throws IOException {
+        App.setRoot("tags_menu");
     }
 
     public void timeTables(ActionEvent event) throws IOException {
         App.setRoot("ManageSession");
 
     }
+
     //------------------------------------------------------------------------------------------
 }
 
