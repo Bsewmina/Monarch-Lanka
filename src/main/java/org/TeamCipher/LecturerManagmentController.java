@@ -121,37 +121,50 @@ public void Subject(ActionEvent event) throws IOException {
     @FXML
     void Delete(ActionEvent event) {
         String temp = txtField_id.getText().toString();
-        if (temp.equals("")){
-            System.out.println("Insert ID");
-            mainLabel.setText("Insert ID");
-        }
-        else
+        if (temp.equals("")) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select Row");
+            alert.showAndWait();
+
+        } else {
             deleteData(Integer.parseInt(txtField_id.getText().toString()));
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Deleted successfully");
+            alert.showAndWait();
+        }
     }
+
 
     @FXML
     void Update(ActionEvent event) {
 
-        String id, l;
-        id = txtField_id.getText().toString();
-        l = (String) choiceBox_level.getValue();
-        rank = l + "." + id;
-
         String check = validate();
+
 
         //validate fields
         if (!check.equals("true")) {
-            System.out.println(check);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(check);
+            alert.showAndWait();
         }
         else {
+            String id, l;
+            id = txtField_id.getText().toString();
+            l = (String) choiceBox_level.getValue();
+            rank = l + "." + id;
 
             Updatedetails(Integer.parseInt(txtField_id.getText()), txtField_name.getText(), choiceBox_faculty.getValue().toString(), choiceBox_department.getValue().toString(), choiceBox_center.getValue().toString(), choiceBox_building.getValue().toString(), Integer.parseInt(choiceBox_level.getValue().toString()), rank);
-
-            mainLabel.setText("Data Deleted Successfully");
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Updated successfully");
+            alert.showAndWait();
         }
     }
 
     public void deleteData(int id){
+
         Connection con = SQliteConnection.DBconnect();
         PreparedStatement ps = null;
         try {
@@ -168,7 +181,6 @@ public void Subject(ActionEvent event) throws IOException {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public static void Updatedetails(int id,String name,String faculty,String dept,String center,String building,int level,String rank) {
@@ -205,30 +217,34 @@ public void Subject(ActionEvent event) throws IOException {
             ModelLecturerTable lecturerTable = tableView.getSelectionModel().getSelectedItem();
             txtField_id.setText(String.valueOf(lecturerTable.getId()));
             txtField_name.setText(lecturerTable.getName());
-            //  choiceBox_faculty.setValue(lecturerTable.getFaculty());
-            //  getFaculty.setText(lecturerTable.getType());
-            //  fcap.setText(String.valueOf(lecturerTable.getCapacity()));
-
+            //choiceBox_faculty.setValue(lecturerTable.getFaculty());
         }
     }
 
     public String validate() {
-        if(txtField_id.getText() == ""){
-            return "Insert Lecurer Name";
+        if(txtField_id.getText().equals("")){
+            return "Select a Table row";
         }
-        else if(txtField_id.getText().equals("")){
+        else if(txtField_name.getText().equals("")){
             return  "Insert Employee ID";
         }
-        else if(rank.equals(null)){
-            return  "Generate Rank";
-        }
         else if(choiceBox_faculty.getValue() == null){
-            return  "Insert Lecture Hours";
+            return  "Select Faculty";
         }
-        else if(choiceBox_department == null){
-            return  "Insert Tute Hours";
+        else if(choiceBox_department.getValue() == null){
+            return  "Select Department";
         }
-        return  "true";
+        else if(choiceBox_center.getValue() == null){
+            return  "Select Center";
+        }
+        else if(choiceBox_building.getValue() == null){
+            return  "Select Building";
+        }
+        else if(choiceBox_level.getValue() == null){
+            return  "Select Lever";
+        }
+        else
+            return  "true";
     }
 
     @Override
@@ -242,7 +258,7 @@ public void Subject(ActionEvent event) throws IOException {
             }
 
         }catch (Exception e){
-            System.err.println("-------------- Error while retrieving data" + e);
+            System.err.println("---- Error while retrieving data" + e);
         }
 
         id.setCellValueFactory(new PropertyValueFactory<>("id"));

@@ -15,8 +15,9 @@ import java.util.ResourceBundle;
 
 public class AddSessionController implements Initializable{
 
-    public TextField txtField_lecturers;
-    public ChoiceBox choBox_seleLec1,choBox_seleLec2;
+    public static String lecurerData,lecturerData2=null;
+    @FXML
+    private ChoiceBox choBox_seleLec1,choBox_seleLec2;
     @FXML
     private Label mainLabel;
 
@@ -78,6 +79,12 @@ public class AddSessionController implements Initializable{
     public void next(ActionEvent event) throws IOException {
         String check = validate();
         if (check.equals("true")) {
+
+            lecurerData = (String) choBox_seleLec1.getValue();
+            lecturerData2 = (String) choBox_seleLec2.getValue();
+            if(lecurerData.equals(lecturerData2)){
+                lecturerData2=null;
+            }
             App.setRoot("AddSession2");
 
         } else {
@@ -89,8 +96,6 @@ public class AddSessionController implements Initializable{
         }
     }
     public void clear(ActionEvent event) {
-        String isTrue = conform();
-        txtField_lecturers.setText("");
         choBox_seleLec1.setValue(null);
         choBox_seleLec2.setValue(null);
     }
@@ -149,8 +154,8 @@ public class AddSessionController implements Initializable{
             getLecture1();
             getLecture2();
         } catch (SQLException throwables) {
+            System.out.println("error");
             throwables.printStackTrace();
         }
-
     }
 }
