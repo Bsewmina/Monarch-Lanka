@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.DaysHoursTableController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.ManageNotAvailableTimesController">
 
    <!--Change Controller accordingly up here^^ -->
 
@@ -148,35 +148,31 @@
             </Button>
          </children>
       </VBox>
-      <ScrollPane layoutX="290.0" layoutY="107.0" prefHeight="469.0" prefWidth="923.0">
+      <ScrollPane layoutX="349.0" layoutY="98.0" prefHeight="421.0" prefWidth="799.0">
          <content>
-            <TableView fx:id="WH_Table" onMouseClicked="#onClicked" prefHeight="460.0" prefWidth="1151.0">
+            <TableView fx:id="NotAv_Table" onMouseClicked="#onClicked" prefHeight="413.0" prefWidth="794.0">
               <columns>
-                <TableColumn fx:id="TC_ID" prefWidth="33.0" text="ID" />
-                <TableColumn id="WH_table" fx:id="TC_Num_of_Days" minWidth="9.0" prefWidth="79.0" text="Num.of Days" />
-                  <TableColumn fx:id="TC_Mon_Time" prefWidth="122.0" text="Mon_Time" />
-                  <TableColumn fx:id="TC_Tue_Time" prefWidth="107.0" text="Tue_Time" />
-                  <TableColumn fx:id="TC_Wed_Time" prefWidth="122.0" text="Wed_Time" />
-                  <TableColumn fx:id="TC_Thu_Time" prefWidth="111.0" text="Thu_Time" />
-                  <TableColumn fx:id="TC_Fri_Time" prefWidth="121.0" text="Fri_Time" />
-                  <TableColumn fx:id="TC_Sat_Time" prefWidth="107.0" text="Sat_Time" />
-                  <TableColumn fx:id="TC_Sun_Time" prefWidth="106.0" text="Sun_Time" />
+                <TableColumn fx:id="TC_id" prefWidth="54.0" text="ID" />
+                  <TableColumn fx:id="TC_Date" minWidth="0.0" prefWidth="118.0" text="Date" />
+                  <TableColumn fx:id="TC_Time" prefWidth="133.0" text="Time Duration" />
+                  <TableColumn fx:id="TC_Lecturer" minWidth="3.0" prefWidth="138.0" text="Lecturer" />
+                  <TableColumn fx:id="TC_group_id" prefWidth="119.0" text="Group ID" />
+                  <TableColumn fx:id="TC_sub_group_id" minWidth="0.0" prefWidth="121.0" text="Sub Group ID" />
+                  <TableColumn fx:id="TC_session_id" prefWidth="103.0" text="Session ID" />
               </columns>
             </TableView>
          </content>
       </ScrollPane>
-      <Button layoutX="726.0" layoutY="657.0" mnemonicParsing="false" onAction="#Back_to_WH" prefHeight="25.0" prefWidth="106.0" text="Back" />
-      <Button layoutX="989.0" layoutY="657.0" mnemonicParsing="false" onAction="#btn_update_WH" prefHeight="25.0" prefWidth="106.0" text="Edit" />
-      <Button layoutX="860.0" layoutY="657.0" mnemonicParsing="false" onAction="#Removedays" prefHeight="25.0" prefWidth="106.0" text="Delete" />
-      <TextField fx:id="TF_Id" layoutX="329.0" layoutY="587.0" prefHeight="25.0" prefWidth="58.0" />
-      <TextField fx:id="TF_Mon" layoutX="514.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_NOD" layoutX="421.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_Tue" layoutX="614.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_Wed" layoutX="709.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_Thu" layoutX="805.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_Fri" layoutX="899.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_Sat" layoutX="999.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <TextField fx:id="TF_Sun" layoutX="1093.0" layoutY="587.0" prefHeight="25.0" prefWidth="82.0" />
-      <Text layoutX="329.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="       ID                   Num.of Days        Mon. Time                Tue. Time            Wed. Time            Thu. Time               Fri. Time                Sat. Time             Sun. Time" wrappingWidth="847.13671875" />
+      <Button fx:id="BT_Back" layoutX="758.0" layoutY="635.0" mnemonicParsing="false" onAction="#BT_Back" prefHeight="25.0" prefWidth="96.0" text="Back" />
+      <Button layoutX="1052.0" layoutY="635.0" mnemonicParsing="false" onAction="#btn_update" prefHeight="25.0" prefWidth="96.0" text="Update" />
+      <Button fx:id="Btn_Remove" layoutX="905.0" layoutY="635.0" mnemonicParsing="false" onAction="#Remove" prefHeight="25.0" prefWidth="96.0" text="Delete" />
+      <TextField fx:id="TF_date" layoutX="414.0" layoutY="544.0" prefHeight="25.0" prefWidth="103.0" />
+      <TextField fx:id="TF_sub_grp_id" layoutX="959.0" layoutY="544.0" prefHeight="25.0" prefWidth="84.0" />
+      <TextField fx:id="TF_grp_id" layoutX="838.0" layoutY="544.0" prefHeight="25.0" prefWidth="96.0" />
+      <TextField fx:id="TF_Lecturer" layoutX="710.0" layoutY="544.0" prefHeight="25.0" prefWidth="96.0" />
+      <TextField fx:id="TF_time" layoutX="542.0" layoutY="544.0" prefHeight="25.0" prefWidth="148.0" />
+      <TextField fx:id="TF_session_id" layoutX="1064.0" layoutY="544.0" prefHeight="25.0" prefWidth="84.0" />
+      <TextField fx:id="TF_date1" layoutX="349.0" layoutY="544.0" prefHeight="25.0" prefWidth="43.0" />
+      <Text layoutX="349.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="   ID                       Date                               Time Duration                           Lecturer                        Group ID                 Sub Group ID             Session ID  " wrappingWidth="799.0" />
    </children>
 </AnchorPane>
