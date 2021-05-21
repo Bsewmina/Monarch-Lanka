@@ -264,9 +264,9 @@
                               <Font size="14.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="btn_delete" layoutX="428.0" layoutY="1054.0" mnemonicParsing="false" onAction="#Delete" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Delete">
+                        <Button fx:id="btn_delete" layoutX="428.0" layoutY="1054.0" mnemonicParsing="false" onAction="#Delete" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-background-color: #F05F5F;" text="Delete" textFill="WHITE">
                            <font>
-                              <Font size="12.0" />
+                              <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
                         <Button fx:id="btn_clear" layoutX="246.0" layoutY="1054.0" mnemonicParsing="false" onAction="#Clear" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Clear">
@@ -274,9 +274,9 @@
                               <Font size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btn_update" layoutX="602.0" layoutY="1054.0" mnemonicParsing="false" onAction="#Update" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Update">
+                        <Button fx:id="btn_update" layoutX="602.0" layoutY="1054.0" mnemonicParsing="false" onAction="#Update" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-background-color: #5F95F0;" text="Update" textFill="WHITE">
                            <font>
-                              <Font size="12.0" />
+                              <Font name="System Bold" size="12.0" />
                            </font>
                         </Button>
                         <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="522.0" prefWidth="967.0">
@@ -285,13 +285,13 @@
                                  <content>
                                     <Pane prefHeight="520.0" prefWidth="952.0">
                                        <children>
-                                          <TableView prefHeight="881.0" prefWidth="957.0">
+                                          <TableView id="tableLec" fx:id="tableView" onMouseClicked="#selectRow" prefHeight="881.0" prefWidth="957.0">
                                             <columns>
-                                              <TableColumn prefWidth="191.0" text="ID" />
-                                              <TableColumn prefWidth="191.0" text="Name" />
-                                                <TableColumn prefWidth="191.0" text="Employee ID" />
-                                                <TableColumn prefWidth="191.0" text="Faculty" />
-                                                <TableColumn prefWidth="191.0" text="Level" />
+                                              <TableColumn id="col_id" fx:id="id" prefWidth="191.0" text="ID" />
+                                              <TableColumn id="col_name" fx:id="name" prefWidth="191.0" text="Name" />
+                                                <TableColumn id="col_empId" fx:id="empID" prefWidth="191.0" text="Employee ID" />
+                                                <TableColumn id="col_fac" fx:id="faculty" prefWidth="191.0" text="Faculty" />
+                                                <TableColumn id="col_level" fx:id="level" prefWidth="191.0" text="Level" />
                                             </columns>
                                           </TableView>
                                        </children>
@@ -305,9 +305,9 @@
             </AnchorPane>
          </content>
       </ScrollPane>
-      <Button fx:id="btn_addLecturer" layoutX="306.0" layoutY="13.0" mnemonicParsing="false" onAction="#addLecturer" prefHeight="26.0" prefWidth="142.0" style="-fx-background-radius: 5; -fx-background-color: green;" text="Add Lecturer">
+      <Button fx:id="btn_addLecturer" layoutX="306.0" layoutY="13.0" mnemonicParsing="false" onAction="#addLecturer" prefHeight="26.0" prefWidth="142.0" style="-fx-background-radius: 5; -fx-background-color: #6ACE6D;" text="Add Lecturer" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
     </children>

@@ -18,9 +18,9 @@ public class PrimaryController {
     private ImageView logo;
     //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
 
-    public void Subject(ActionEvent event) {
+    public void Subject(ActionEvent event) throws IOException {
 
-        mainLabel.setText("Subject Clicked");
+        App.setRoot("Subject_Managment");
     }
 
     public void WorkingDH(ActionEvent event) {
@@ -50,23 +50,23 @@ public class PrimaryController {
         App.setRoot("statistic");
     }
 
-    public void studentGoups(ActionEvent event) {
-
+    public void studentGoups(ActionEvent event) throws IOException {
+        App.setRoot("student_groups_menu");
     }
 
     public void location(ActionEvent event ) throws IOException {
-        App.setRoot("location");
+        App.setRoot("AddSession1");
     }
 
-    public void tags(ActionEvent event) {
-
-        mainLabel.setText("tags Clicked");
+    public void tags(ActionEvent event) throws IOException {
+        App.setRoot("tags_menu");
     }
 
     public void timeTables(ActionEvent event) throws IOException {
-
+        App.setRoot("ManageSession");
 
     }
+
     //------------------------------------------------------------------------------------------
 }
 

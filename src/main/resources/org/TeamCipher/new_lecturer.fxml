@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -11,8 +13,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.NewLecturerController">
 
     <children>
@@ -199,7 +199,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ChoiceBox id="choiceBox_faculty" fx:id="choiceBox_faculty" layoutX="762.0" layoutY="274.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+      <ChoiceBox id="choiceBox_faculty" fx:id="choiceBox_faculty" layoutX="762.0" layoutY="274.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Computiing" />
@@ -209,7 +209,7 @@
               </FXCollections>
           </items>
       </ChoiceBox>
-      <ChoiceBox id="choiceBox_department" fx:id="choiceBox_department" layoutX="762.0" layoutY="324.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+      <ChoiceBox id="choiceBox_department" fx:id="choiceBox_department" layoutX="762.0" layoutY="324.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="IT" />
@@ -219,7 +219,7 @@
               </FXCollections>
           </items>
       </ChoiceBox>
-      <ChoiceBox id="choiceBox_center" fx:id="choiceBox_center" layoutX="762.0" layoutY="374.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+      <ChoiceBox id="choiceBox_center" fx:id="choiceBox_center" layoutX="762.0" layoutY="374.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Malabe" />
@@ -231,7 +231,7 @@
               </FXCollections>
           </items>
       </ChoiceBox>
-      <ChoiceBox id="choiceBox_building" fx:id="choiceBox_building" layoutX="762.0" layoutY="424.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;" >
+      <ChoiceBox id="choiceBox_building" fx:id="choiceBox_building" layoutX="762.0" layoutY="424.0" prefHeight="26.0" prefWidth="230.0" style="-fx-background-radius: 30;">
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Main building" />
@@ -269,9 +269,9 @@
             <Font size="12.0" />
          </font>
       </Button>
-      <Button id="btn_save" fx:id="btn_save" layoutX="873.0" layoutY="606.0" mnemonicParsing="false" onAction="#saveDetails" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Save Details">
+      <Button id="btn_save" fx:id="btn_save" layoutX="873.0" layoutY="606.0" mnemonicParsing="false" onAction="#saveDetails" prefHeight="43.0" prefWidth="118.0" style="-fx-background-radius: 50; -fx-background-color: #5F95F0;" text="Save Details" textFill="WHITE">
          <font>
-            <Font size="12.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Button>
     </children>
