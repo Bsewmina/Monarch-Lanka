@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.TeamCipher.ManageSessionController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.ManageSessionController">
 
     <children>
-        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Session Management" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
             <padding>
                 <Insets right="40.0" />
             </padding>
@@ -141,5 +142,144 @@
                 </Button>
             </children>
         </VBox>
+        <ScrollPane layoutX="264.0" layoutY="59.0" prefHeight="691.0" prefWidth="985.0">
+            <content>
+                <AnchorPane prefHeight="1131.0" prefWidth="965.0">
+                    <children>
+                        <Pane prefHeight="691.0" prefWidth="965.0">
+                            <children>
+                                <Label layoutX="328.0" layoutY="722.0" prefHeight="18.0" prefWidth="74.0" text="Select Tag">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="choBox_tag" layoutX="515.0" layoutY="719.0" prefHeight="26.0" prefWidth="190.0" />
+                                <Label layoutX="328.0" layoutY="780.0" prefHeight="21.0" prefWidth="118.0" text="Select Group">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="choBox_group" layoutX="515.0" layoutY="778.0" prefHeight="26.0" prefWidth="190.0" />
+                                <Label layoutX="328.0" layoutY="944.0" prefHeight="22.0" prefWidth="158.0" text="Number of Student">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="328.0" layoutY="999.0" prefHeight="22.0" prefWidth="158.0" text="Duration (Hrs)">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="328.0" layoutY="889.0" prefHeight="21.0" prefWidth="118.0" text="Session Type">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="choBox_type" layoutX="515.0" layoutY="886.0" prefHeight="26.0" prefWidth="190.0">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Parallel" />
+                                            <String fx:value="Engineering" />
+                                            <String fx:value="Business" />
+                                        </FXCollections>
+                                    </items>
+                                </ChoiceBox>
+                                <Spinner fx:id="spinner_noOfStd" editable="true" layoutX="561.0" layoutY="942.0">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="200" min="0" />
+                                    </valueFactory>
+                                </Spinner>
+                                <Spinner fx:id="spinner_duration" editable="true" layoutX="561.0" layoutY="997.0">
+                                    <valueFactory>
+                                        <SpinnerValueFactory.IntegerSpinnerValueFactory max="3" min="0" />
+                                    </valueFactory>
+                                </Spinner>
+                                <Label layoutX="328.0" layoutY="834.0" prefHeight="21.0" prefWidth="118.0" text="Select Subject">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="choBox_subject" layoutX="515.0" layoutY="831.0" prefHeight="26.0" prefWidth="190.0" />
+                                <Label layoutX="328.0" layoutY="620.0" text="Select Lecturer">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="choBox_seleLec1" layoutX="488.0" layoutY="617.0" prefHeight="26.0" prefWidth="219.0" />
+                                <Label layoutX="328.0" layoutY="665.0" text="Select Lecturer 2 (opt)">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="choBox_seleLec2" layoutX="488.0" layoutY="662.0" prefHeight="26.0" prefWidth="219.0" />
+                                <ChoiceBox fx:id="choBox_searchType" layoutX="419.0" layoutY="505.0" prefHeight="26.0" prefWidth="219.0" />
+                                <Button layoutX="705.0" layoutY="502.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="136.0" style="-fx-background-radius: 30;" text="Search">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="641.0" layoutY="1068.0" mnemonicParsing="false" onAction="#update" text="Update">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="485.0" layoutY="1068.0" mnemonicParsing="false" onAction="#delete" text="Delete">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="326.0" layoutY="1068.0" mnemonicParsing="false" onAction="#clear" text="Clear">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                        <Label layoutX="328.0" layoutY="577.0" text="ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_sessionId" editable="false" layoutX="529.0" layoutY="572.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                                <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="522.0" prefWidth="967.0">
+                                    <children>
+                                        <ScrollPane prefHeight="518.0" prefWidth="969.0">
+                                            <content>
+                                                <Pane prefHeight="520.0" prefWidth="952.0">
+                                                    <children>
+                                                        <TableView id="tableLec" fx:id="tableView" onMouseClicked="#getSession" prefHeight="881.0" prefWidth="957.0">
+                                                            <columns>
+                                                                <TableColumn id="col_id" fx:id="id" prefWidth="75.16983032226562" text="ID" />
+                                                                <TableColumn id="col_name" fx:id="lec1" prefWidth="178.4150390625" text="Lecturer 1" />
+                                                                <TableColumn id="col_empId" fx:id="lec2" prefWidth="179.32080078125" text="Lecturer 2" />
+                                                                <TableColumn id="col_fac" fx:id="session" prefWidth="125.88677978515625" text="Session Type" />
+                                                                <TableColumn id="col_level" fx:id="subject" prefWidth="105.96221923828125" text="Subject Name" />
+                                                <TableColumn id="col_level" fx:id="group" prefWidth="144.9056396484375" text="Group ID" />
+                                                <TableColumn id="col_level" fx:id="tag" prefWidth="144.90576171875" text="Tag" />
+                                                            </columns>
+                                                        </TableView>
+                                                    </children>
+                                                </Pane>
+                                            </content></ScrollPane>
+                                    </children>
+                                </AnchorPane>
+
+
+
+
+
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+              <Button layoutX="339.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="147.0" text="Add Session">
+                  <font>
+                      <Font size="14.0" />
+                  </font>
+              </Button>
     </children>
 </AnchorPane>

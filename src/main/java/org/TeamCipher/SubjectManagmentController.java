@@ -121,25 +121,35 @@ public class SubjectManagmentController implements Initializable {
     public void Delete(ActionEvent event) {
         String temp = btnID.getText().toString();
         if (temp.equals("")){
-            System.out.println("Insert ID");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Select Row");
+            alert.showAndWait();
         }
-        else
+        else{
             deleteData(Integer.parseInt(temp));
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Deleted successfully");
+            alert.showAndWait();
+        }
     }
 
     public void Update(ActionEvent event) {
         String check = validate();
 
         //validate fields
-        int semester = getSemester();
         if (!check.equals("true")) {
-            System.out.println(check);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(check);
+            alert.showAndWait();
+
+        } else {
+            UpdateSubject(Integer.parseInt(btnID.getText()), txtField_subName.getText(), txt_Field_subCode.getText(), Integer.parseInt((String) choiceBox_year.getValue()), getSemester(), Integer.parseInt(spinner_noLecHours.getValue().toString()), Integer.parseInt(spinner_noTutHours.getValue().toString()), Integer.parseInt(spinner_noLabHours.getValue().toString()), Integer.parseInt(spinner_noEvalHours.getValue().toString()));
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Updated successfully");
+            alert.showAndWait();
         }
-        //validate year
-        if (semester == 0) {
-            System.out.println("add semester");
-        } else
-            UpdateSubject(Integer.parseInt(btnID.getText()),txtField_subName.getText(),txt_Field_subCode.getText(),Integer.parseInt((String) choiceBox_year.getValue()),semester,Integer.parseInt(spinner_noLecHours.getValue().toString()),Integer.parseInt(spinner_noTutHours.getValue().toString()),Integer.parseInt(spinner_noLabHours.getValue().toString()),Integer.parseInt(spinner_noEvalHours.getValue().toString()));
     }
 
     public int getSemester(){
@@ -156,25 +166,28 @@ public class SubjectManagmentController implements Initializable {
 
     public String validate() {
         if(choiceBox_year.getValue() == null){
-            return "insert Year";
+            return "Insert Year";
+        }
+        else if(getSemester() == 0){
+            return "Select Semester";
         }
         else if(txtField_subName.getText().equals("")){
-            return  "insert SubjectName";
+            return  "Insert SubjectName";
         }
         else if(txt_Field_subCode.getText().equals("")){
-            return  "insert SubjectCode";
+            return  "Insert SubjectCode";
         }
         else if(spinner_noLecHours.getValue() == null){
-            return  "insert Lecture Hours";
+            return  "Insert Lecture Hours";
         }
         else if(spinner_noTutHours.getValue() == null){
-            return  "insert Tute Hours";
+            return  "Insert Tute Hours";
         }
         else if(spinner_noLabHours.getValue() == null){
-            return  "insert Lab Hours";
+            return  "Insert Lab Hours";
         }
         else if(spinner_noEvalHours.getValue() == null){
-            return  "insert Evaluation Hours";
+            return  "Insert Evaluation Hours";
         }
         return  "true";
     }
@@ -191,7 +204,7 @@ public class SubjectManagmentController implements Initializable {
 
             ps.close();
             con.close();
-
+            App.setRoot("Subject_Managment");
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error while Deleting Data !!!!!");
@@ -206,7 +219,7 @@ public class SubjectManagmentController implements Initializable {
         try {
             String sql = "UPDATE Subject SET name=?, code=?, year=?, semester=?, lec_hours=?, tut_hours=?, lab_hours=?, evaluation_hours=? WHERE id = ?";
             ps = con.prepareStatement(sql);
-            ps.setString(1,"dddddd");
+            ps.setString(1,name);
             ps.setString(2,code);
             ps.setInt(3,year);
             ps.setInt(4,semester);
@@ -220,6 +233,7 @@ public class SubjectManagmentController implements Initializable {
 
             ps.close();
             con.close();
+            App.setRoot("Subject_Managment");
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error while updating data !!!!!");

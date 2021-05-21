@@ -19,7 +19,7 @@ public class NewSubjectController {
     //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
 
     @FXML
-    private Spinner<?> spinner_noLecHours, spinner_noTutHours, spinner_noLabHours, spinner_noEvalHours;
+    private Spinner<Integer> spinner_noLecHours, spinner_noTutHours, spinner_noLabHours, spinner_noEvalHours;
 
     @FXML
     private ChoiceBox<?> choiceBox_year;
@@ -80,6 +80,7 @@ public class NewSubjectController {
 
     }
     //----------------------------------
+
     public int getSemester(){
         if (rButton1.isSelected()){
             mainLabel.setText(rButton1.getText());
@@ -94,25 +95,28 @@ public class NewSubjectController {
 
     public String validate() {
         if(choiceBox_year.getValue() == null){
-            return "insert Year";
+            return "Insert Year";
+        }
+        else if(getSemester() == 0){
+            return "Select Semester";
         }
         else if(txtField_subName.getText().equals("")){
-            return  "insert SubjectName";
+            return  "Insert SubjectName";
         }
         else if(txt_Field_subCode.getText().equals("")){
-            return  "insert SubjectCode";
+            return  "Insert SubjectCode";
         }
-        else if(spinner_noLecHours.getValue() == null){
-            return  "insert Lecture Hours";
+        else if(spinner_noLecHours.getValueFactory().getValue() == null){
+            return  "Insert Lecture Hours";
         }
-        else if(spinner_noTutHours.getValue() == null){
-            return  "insert Tute Hours";
+        else if(spinner_noTutHours.getValueFactory().getValue() == null){
+            return  "Insert Tute Hours";
         }
-        else if(spinner_noLabHours.getValue() == null){
-            return  "insert Lab Hours";
+        else if(spinner_noLabHours.getValueFactory().getValue() == null){
+            return  "Insert Lab Hours";
         }
-        else if(spinner_noEvalHours.getValue() == null){
-            return  "insert Evaluation Hours";
+        else if(spinner_noEvalHours.getValueFactory().getValue() == null){
+            return  "Insert Evaluation Hours";
         }
         return  "true";
     }
@@ -120,22 +124,30 @@ public class NewSubjectController {
     public void clearDetails(ActionEvent event) {
         txtField_subName.setText("");
         txt_Field_subCode.setText("");
+        spinner_noLecHours.getValueFactory().setValue(0);
+        spinner_noTutHours.getValueFactory().setValue(0);
+        spinner_noLabHours.getValueFactory().setValue(0);
+        spinner_noEvalHours.getValueFactory().setValue(0);
     }
 
     public void saveDetails(ActionEvent event) {
     String check = validate();
-
-    //validate fields
     int semester = getSemester();
+
         if(!check.equals("true")){
-            System.out.println(check);
-        }
-        //validate year
-        if(semester == 0){
-            System.out.println("add semester");
-        }
-        else
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText(check);
+            alert.showAndWait();
+
+        } else {
+
             insert(txtField_subName.getText(),txt_Field_subCode.getText(),Integer.parseInt((String) choiceBox_year.getValue()),semester,Integer.parseInt(spinner_noLecHours.getValue().toString()),Integer.parseInt(spinner_noTutHours.getValue().toString()),Integer.parseInt(spinner_noLabHours.getValue().toString()),Integer.parseInt(spinner_noEvalHours.getValue().toString()));
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Data Added successfully");
+            alert.setHeaderText(check);
+            alert.showAndWait();
+        }
     }
 
 
@@ -162,7 +174,6 @@ public class NewSubjectController {
             e.printStackTrace();
             System.out.println("Error while inserting data !!!!!");
         }
-
     }
 
 }

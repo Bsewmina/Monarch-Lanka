@@ -2,10 +2,7 @@ package org.TeamCipher;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
@@ -75,7 +72,7 @@ public class NewLecturerController {
     private TextField txtField_id,txtField_name,txtInput_rank;
 
     @FXML
-    private ChoiceBox<?> choiceBox_faculty, choiceBox_department, choiceBox_center, choiceBox_building, choiceBox_level;
+    private ChoiceBox choiceBox_faculty, choiceBox_department, choiceBox_center, choiceBox_building, choiceBox_level;
 
     @FXML
     private Button btn_clear, btn_genarateRank, btn_save;
@@ -84,16 +81,20 @@ public class NewLecturerController {
 
         if (selection == null) {
             mainLabel.setText("First Generate Rank");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("First add details and Generate Rank");
+            alert.showAndWait();
         }
-        else if(!selection.equals("true")){
-            mainLabel.setText("First Generate Rank");
-        }
+
         else {
             String check = validate();
+
             //validate fields
             if (!check.equals("true")) {
                 System.out.println(check);
-                mainLabel.setText(check);
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle(check);
+                alert.showAndWait();
             }
             else{
                 insert(Integer.parseInt(txtField_id.getText()), txtField_name.getText(), choiceBox_faculty.getValue().toString(), choiceBox_department.getValue().toString(), choiceBox_center.getValue().toString(), choiceBox_building.getValue().toString(), Integer.parseInt(choiceBox_level.getValue().toString()), rank);
@@ -135,7 +136,9 @@ public class NewLecturerController {
             ps.setInt(7,level);
             ps.setString(8,rank);
             ps.execute();
-            System.out.println("Data added successfully !!!!!");
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Data inserted successfully");
+            alert.showAndWait();
 
             ps.close();
             con.close();
@@ -146,22 +149,29 @@ public class NewLecturerController {
     }
 
     public String validate() {
-        if(txtField_id.getText() == ""){
-            return "Insert Lecurer Name";
+        if(txtField_id.getText().equals("")){
+            return "Select a Table row";
         }
-        else if(txtField_id.getText().equals("")){
+        else if(txtField_name.getText().equals("")){
             return  "Insert Employee ID";
         }
-        else if(rank.equals(null)){
-            return  "Generate Rank";
-        }
         else if(choiceBox_faculty.getValue() == null){
-            return  "Insert Lecture Hours";
+            return  "Select Faculty";
         }
-        else if(choiceBox_department == null){
-            return  "Insert Tute Hours";
+        else if(choiceBox_department.getValue() == null){
+            return  "Select Department";
         }
-        return  "true";
+        else if(choiceBox_center.getValue() == null){
+            return  "Select Center";
+        }
+        else if(choiceBox_building.getValue() == null){
+            return  "Select Building";
+        }
+        else if(choiceBox_level.getValue() == null){
+            return  "Select Lever";
+        }
+        else
+            return  "true";
     }
 
 }
