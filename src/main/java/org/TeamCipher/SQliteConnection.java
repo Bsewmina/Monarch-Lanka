@@ -10,7 +10,7 @@ public class SQliteConnection {
         try{
 
             Class.forName("org.sqlite.JDBC");//identifier
-            con = DriverManager.getConnection("jdbc:sqlite:C:/Users/SEMINA/Desktop/identifier.sqlite");
+            con = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\SEMINA\\IdeaProjects\\Monarch-Lanka\\database.db");
             System.out.println("-----------------------------------Connected to Database---------------------------------");
 
 
