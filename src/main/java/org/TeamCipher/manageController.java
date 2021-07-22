@@ -37,34 +37,23 @@ public class manageController implements Initializable {
     ObservableList<Location> observableList = FXCollections.observableArrayList();
 
 
-    public void Subject(ActionEvent event) {
-
-        mainLabel.setText("Subject Clicked");
+    public void Subject(ActionEvent event) throws IOException {
+        App.setRoot("Subject_Managment");
     }
 
-    public void WorkingDH(ActionEvent event) {
-
-        mainLabel.setText("WorkingDH Clicked");
+    public void WorkingDH(ActionEvent event) throws IOException {
+        App.setRoot("DaysHours");
     }
 
-    public void lecturers(ActionEvent event) {
-
-        mainLabel.setText("lecturers Clicked");
+    public void lecturers(ActionEvent event) throws IOException {
+        App.setRoot("Lecturer_Managment");
     }
 
-    public void logout(ActionEvent event) {
-
-        mainLabel.setText("logout Clicked");
-    }
-
-    public void session(ActionEvent event) {
-
-        mainLabel.setText("session Clicked");
+    public void session(ActionEvent event) throws IOException {
+        App.setRoot("manageRoom");
     }
 
     public void statistic(ActionEvent event) throws IOException {
-
-        mainLabel.setText("statistics Clicked");
         App.setRoot("statistic");
     }
 
@@ -72,19 +61,15 @@ public class manageController implements Initializable {
         App.setRoot("student_groups_menu");
     }
 
-    public void location(ActionEvent event) throws IOException {
+    public void location(ActionEvent event ) throws IOException {
         App.setRoot("location");
     }
 
-    public void tags(ActionEvent event) {
-
-        mainLabel.setText("tags Clicked");
+    public void tags(ActionEvent event) throws IOException {
+        App.setRoot("tags_menu");
     }
 
-    public void timeTables(ActionEvent event) {
-
-        mainLabel.setText("Time Table Clicked");
-
+    public void timeTables(ActionEvent event) throws IOException {
     }
     //------------------------------------------------------------------------------------------
 
@@ -163,6 +148,9 @@ public class manageController implements Initializable {
                 ps.setInt(1, id);
                 ps.execute();
                 System.out.println("Data Deleted Successfully !!!!!");
+
+                alert("Deleted Successfully",null);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -200,6 +188,9 @@ public class manageController implements Initializable {
                 ps.setInt(5,id);
                 ps.execute();
                 System.out.println("Data Deleted Successfully !!!!!");
+
+                alert("Updated Successfully",null);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -322,6 +313,19 @@ public class manageController implements Initializable {
         else{
             System.out.println("Cancel");
         }
+
+    }
+
+
+    @FXML
+    private void alert(String text,ActionEvent event){
+
+        Alert al = new Alert(Alert.AlertType.INFORMATION);
+        al.setTitle("Successful");
+        al.setContentText(text);
+        al.setHeaderText(null);
+        al.showAndWait();
+
 
     }
 

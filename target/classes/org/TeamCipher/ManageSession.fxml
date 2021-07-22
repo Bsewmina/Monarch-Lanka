@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.ManageSessionController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.ManageSessionController">
 
     <children>
         <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Session Management" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -179,8 +176,8 @@
                                     <items>
                                         <FXCollections fx:factory="observableArrayList">
                                             <String fx:value="Parallel" />
-                                            <String fx:value="Engineering" />
-                                            <String fx:value="Business" />
+                                            <String fx:value="consecutive" />
+                                            <String fx:value="Non-overlapping" />
                                         </FXCollections>
                                     </items>
                                 </ChoiceBox>
@@ -212,23 +209,17 @@
                                     </font>
                                 </Label>
                                 <ChoiceBox fx:id="choBox_seleLec2" layoutX="488.0" layoutY="662.0" prefHeight="26.0" prefWidth="219.0" />
-                                <ChoiceBox fx:id="choBox_searchType" layoutX="419.0" layoutY="505.0" prefHeight="26.0" prefWidth="219.0" />
-                                <Button layoutX="705.0" layoutY="502.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="136.0" style="-fx-background-radius: 30;" text="Search">
+                                <Button layoutX="641.0" layoutY="1068.0" mnemonicParsing="false" onAction="#update" style="-fx-background-radius: 50; -fx-background-color: #5F95F0;" text="Update" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="485.0" layoutY="1068.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-radius: 50; -fx-background-color: #F05F5F;" text="Delete" textFill="WHITE">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
                                 </Button>
-                                <Button layoutX="641.0" layoutY="1068.0" mnemonicParsing="false" onAction="#update" text="Update">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Button>
-                                <Button layoutX="485.0" layoutY="1068.0" mnemonicParsing="false" onAction="#delete" text="Delete">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Button>
-                                <Button layoutX="326.0" layoutY="1068.0" mnemonicParsing="false" onAction="#clear" text="Clear">
+                                <Button layoutX="326.0" layoutY="1068.0" mnemonicParsing="false" onAction="#clear" style="-fx-background-radius: 50;" text="Clear">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
@@ -276,9 +267,9 @@
                 </AnchorPane>
             </content>
         </ScrollPane>
-              <Button layoutX="339.0" layoutY="10.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="147.0" text="Add Session">
+              <Button layoutX="339.0" layoutY="10.0" mnemonicParsing="false" onAction="#createSession" prefHeight="38.0" prefWidth="163.0" style="-fx-background-color: #6ACE6D; -fx-background-radius: 5;" text="Create New Session" textFill="WHITE">
                   <font>
-                      <Font size="14.0" />
+                      <Font name="System Bold" size="14.0" />
                   </font>
               </Button>
     </children>

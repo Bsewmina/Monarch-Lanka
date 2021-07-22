@@ -136,7 +136,7 @@ public class ManageNotAvailableRoomsController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         PreparedStatement ps = null;
         try {
-            String sql = "UPDATE nonav_sessions SET session_id=?, group_id=?, room_id=?, s_date=?, s_time=? WHERE sid=?";
+            String sql = "UPDATE sessions SET session_id=?, group_id=?, room_id=?, s_date=?, s_time=? WHERE sid=?";
             ps = con.prepareStatement(sql);
             ps.setString(1, TF_sesid_text);
             ps.setString(2, TF_grpid_text);
@@ -173,7 +173,7 @@ public class ManageNotAvailableRoomsController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         PreparedStatement ps = null;
         try {
-            String sql = "DELETE FROM nonav_sessions WHERE sid = ?";
+            String sql = "DELETE FROM sessions WHERE sid = ?";
             ps = con.prepareStatement(sql);
             ps.setInt(1, id);
             ps.execute();
@@ -210,7 +210,7 @@ public class ManageNotAvailableRoomsController implements Initializable {
         //calling the alert
         alertD(null);
         //refresh the page
-        App.setRoot("ManageNotAvailableRooms");
+        App.setRoot("SessionsTable");
     }
 
 
@@ -224,7 +224,7 @@ public class ManageNotAvailableRoomsController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM nonav_sessions");
+            rs = con.createStatement().executeQuery("SELECT * FROM sessions");
             System.out.println("In the view Query");
             while (rs.next()) {
                 observableList.add(new NotAvailableRoomsModel(rs.getInt("sid"),
@@ -248,9 +248,9 @@ public class ManageNotAvailableRoomsController implements Initializable {
 
     }
 
-    public void back(ActionEvent event) throws IOException {
-        App.setRoot("NotAvailableRooms");
-    }
+
+
+
 
 
     //------------------------------------------------------------------------------------------

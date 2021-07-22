@@ -27,69 +27,41 @@ public class AddTagsController {
     @FXML
     private ChoiceBox relTag;
 
-
-    public void Subject(ActionEvent event) {
-
-        mainLabel.setText("Subject Clicked");
+    public void Subject(ActionEvent event) throws IOException {
+        App.setRoot("Subject_Managment");
     }
 
-    public void WorkingDH(ActionEvent event) {
-
-        mainLabel.setText("WorkingDH Clicked");
+    public void WorkingDH(ActionEvent event) throws IOException {
+        App.setRoot("DaysHours");
     }
 
-    public void lecturers(ActionEvent event) {
-
-        mainLabel.setText("lecturers Clicked");
+    public void lecturers(ActionEvent event) throws IOException {
+        App.setRoot("Lecturer_Managment");
     }
 
-    public void logout(ActionEvent event) {
-
-        mainLabel.setText("logout Clicked");
+    public void session(ActionEvent event) throws IOException {
+        App.setRoot("manageRoom");
     }
 
-    public void session(ActionEvent event) {
-
-        mainLabel.setText("session Clicked");
-    }
-
-    public void statistic(ActionEvent event) {
-
-        mainLabel.setText("statistics Clicked");
+    public void statistic(ActionEvent event) throws IOException {
+        App.setRoot("statistic");
     }
 
     public void studentGoups(ActionEvent event) throws IOException {
         App.setRoot("student_groups_menu");
     }
 
-    public void location(ActionEvent event ){
-        mainLabel.setText("location Clicked");
+    public void location(ActionEvent event ) throws IOException {
+        App.setRoot("location");
     }
 
     public void tags(ActionEvent event) throws IOException {
         App.setRoot("tags_menu");
     }
 
-    public void timeTables(ActionEvent event) {
-
-        mainLabel.setText("Time Table Clicked");
-
+    public void timeTables(ActionEvent event) throws IOException {
     }
-
-    public void manage_existing_tags(ActionEvent event) throws IOException {
-        App.setRoot("add_tags");
-    }
-
-    @FXML
-    void create_new_stdGroups(ActionEvent event) throws IOException {
-        App.setRoot("add_groups");
-    }
-
-    public void manage_existing_stdGroups(ActionEvent event) throws IOException {
-        App.setRoot("student_existing");
-    }
-
-    //------------------------------------------------------------- Clear Field
+    //------------------------------------------------------------------------------------------
     @FXML
     void clear(ActionEvent event) {
 

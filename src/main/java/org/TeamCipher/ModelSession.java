@@ -3,7 +3,7 @@ package org.TeamCipher;
 public class ModelSession {
 
     private int id;
-    private String lec1,lec2,tag,group,subject,sesType;
+    private String lec1,lec2,tag,group,subject,ssType;
 
     public ModelSession(int id, String lec1, String lec2, String tag, String group, String subject, String ssType) {
         this.id = id;
@@ -12,7 +12,7 @@ public class ModelSession {
         this.tag = tag;
         this.group = group;
         this.subject = subject;
-        this.sesType = ssType;
+        this.ssType = ssType;
     }
 
     public int getId() {
@@ -63,11 +63,11 @@ public class ModelSession {
         this.subject = subject;
     }
 
-    public String getsType() {
-        return sesType;
+    public String getSsType() {
+        return ssType;
     }
 
-    public void setsType(String sType) {
-        this.sesType = sType;
+    public void setSsType(String ssType) {
+        this.ssType = ssType;
     }
 }

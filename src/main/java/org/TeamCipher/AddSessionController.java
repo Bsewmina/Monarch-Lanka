@@ -24,55 +24,41 @@ public class AddSessionController implements Initializable{
 
 
 
-
     public void Subject(ActionEvent event) throws IOException {
-
         App.setRoot("Subject_Managment");
     }
 
-    public void WorkingDH(ActionEvent event) {
-
-        mainLabel.setText("WorkingDH Clicked");
+    public void WorkingDH(ActionEvent event) throws IOException {
+        App.setRoot("DaysHours");
     }
 
     public void lecturers(ActionEvent event) throws IOException {
-
         App.setRoot("Lecturer_Managment");
     }
 
-    public void logout(ActionEvent event) {
-
-        mainLabel.setText("logout Clicked");
-    }
-
-    public void session(ActionEvent event) {
-
-        mainLabel.setText("session Clicked");
+    public void session(ActionEvent event) throws IOException {
+        App.setRoot("manageRoom");
     }
 
     public void statistic(ActionEvent event) throws IOException {
-
-        mainLabel.setText("statistics Clicked");
         App.setRoot("statistic");
     }
 
-    public void studentGoups(ActionEvent event) {
-
+    public void studentGoups(ActionEvent event) throws IOException {
+        App.setRoot("student_groups_menu");
     }
 
     public void location(ActionEvent event ) throws IOException {
         App.setRoot("location");
     }
 
-    public void tags(ActionEvent event) {
-
-        mainLabel.setText("tags Clicked");
+    public void tags(ActionEvent event) throws IOException {
+        App.setRoot("tags_menu");
     }
 
     public void timeTables(ActionEvent event) throws IOException {
-
-
     }
+    //------------------------------------------------------------------------------------------
 
     //------------------------------------------------------------------------------------------
 

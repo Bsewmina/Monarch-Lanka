@@ -51,9 +51,9 @@ public class AddSessionController2 implements Initializable {
         mainLabel.setText("logout Clicked");
     }
 
-    public void session(ActionEvent event) {
+    public void session(ActionEvent event) throws IOException {
 
-        mainLabel.setText("session Clicked");
+        App.setRoot("ManageSession");
     }
 
     public void statistic(ActionEvent event) throws IOException {
@@ -92,6 +92,7 @@ public class AddSessionController2 implements Initializable {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Updated successfully");
             alert.showAndWait();
+            App.setRoot("ManageSession");
 
 
         } else {
@@ -139,9 +140,9 @@ public class AddSessionController2 implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Lecturer");
+            rs = con.createStatement().executeQuery("SELECT * FROM tags");
             while (rs.next()) {
-                choBox_tag.getItems().add(rs.getString("name"));
+                choBox_tag.getItems().add(rs.getString("related_tag"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -149,12 +150,14 @@ public class AddSessionController2 implements Initializable {
     }
 
     public void getGroup() throws SQLException {
+
+
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Lecturer");
+            rs = con.createStatement().executeQuery("SELECT * FROM student_groups");
             while (rs.next()) {
-                choBox_group.getItems().add(rs.getString("name"));
+                choBox_group.getItems().add(rs.getString("subgroup_id"));
             }
 
         } catch (SQLException throwables) {
@@ -165,7 +168,7 @@ public class AddSessionController2 implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Lecturer");
+            rs = con.createStatement().executeQuery("SELECT * FROM Subject");
             while (rs.next()) {
                 choBox_subject.getItems().add(rs.getString("name"));
             }

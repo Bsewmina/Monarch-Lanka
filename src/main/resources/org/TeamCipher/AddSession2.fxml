@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
-<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.AddSessionController2">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.AddSessionController2">
 
     <children>
         <Label fx:id="mainLabel" alignment="CENTER_RIGHT" layoutX="264.0" prefHeight="58.0" prefWidth="848.0" style="-fx-background-color: #40A0C4;" text="Session" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -174,9 +171,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btn_submit" layoutX="876.0" layoutY="597.0" mnemonicParsing="false" onAction="#submit" prefHeight="31.0" prefWidth="91.0" style="-fx-background-radius: 30;" text="Submit">
+      <Button fx:id="btn_submit" layoutX="876.0" layoutY="597.0" mnemonicParsing="false" onAction="#submit" prefHeight="31.0" prefWidth="91.0" style="-fx-background-radius: 30; -fx-background-color: #6ACE6D;" text="Submit" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
       <Label layoutX="588.0" layoutY="408.0" prefHeight="21.0" prefWidth="118.0" text="Session Type">
@@ -188,17 +185,17 @@
           <items>
               <FXCollections fx:factory="observableArrayList">
                   <String fx:value="Parallel" />
-                  <String fx:value="Engineering" />
-                  <String fx:value="Business" />
+                  <String fx:value="consecutive" />
+                  <String fx:value="Non-overlapping" />
               </FXCollections>
           </items>
       </ChoiceBox>
-      <Spinner fx:id="spinner_noOfStd" editable="true" layoutX="821.0" layoutY="461.0" >
+      <Spinner fx:id="spinner_noOfStd" editable="true" layoutX="821.0" layoutY="461.0">
           <valueFactory>
               <SpinnerValueFactory.IntegerSpinnerValueFactory max="200" min="0" />
           </valueFactory>
       </Spinner>
-      <Spinner fx:id="spinner_duration" editable="true" layoutX="821.0" layoutY="516.0" >
+      <Spinner fx:id="spinner_duration" editable="true" layoutX="821.0" layoutY="516.0">
           <valueFactory>
               <SpinnerValueFactory.IntegerSpinnerValueFactory max="3" min="0" />
           </valueFactory>

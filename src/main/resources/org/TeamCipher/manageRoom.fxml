@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.manageRoomController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0 " prefWidth="1250.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.manageRoomController">
 
     <!--Change Controller accordingly up here^^ -->
 
@@ -147,30 +147,35 @@
                 </Button>
             </children>
         </VBox>
-      <Button id="student_menu_btn" layoutX="548.0" layoutY="572.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Refresh">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <Button id="student_menu_btn" fx:id="save" layoutX="760.0" layoutY="572.0" mnemonicParsing="false" onAction="#switchToNewLocation" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #4ff792;" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Add Room">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Button>
-      <TabPane layoutX="288.0" layoutY="155.0" prefHeight="348.0" prefWidth="808.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="272.0" layoutY="104.0" prefHeight="421.0" prefWidth="956.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Sessions">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="756.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="956.0">
                      <children>
-                        <TableView fx:id="tableView" prefHeight="326.0" prefWidth="808.0">
+                        <TableView fx:id="tableView" prefHeight="308.0" prefWidth="956.0">
                           <columns>
                             <TableColumn fx:id="id" prefWidth="104.0" text="ID" />
                             <TableColumn fx:id="session" minWidth="0.0" prefWidth="204.0" text="Session" />
-                              <TableColumn fx:id="room" prefWidth="168.0" text="Room" />
-                              <TableColumn fx:id="sessionDetails" prefWidth="331.0" text="Session Details" />
+                              <TableColumn fx:id="room" prefWidth="322.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails" prefWidth="325.0" text="Session Details" />
                           </columns>
                         </TableView>
+                        <Button id="student_menu_btn" layoutX="133.0" layoutY="327.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="170.0" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Refresh">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button id="student_menu_btn" fx:id="save" layoutX="359.0" layoutY="327.0" mnemonicParsing="false" onAction="#switchToNewLocation" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #4ff792;" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Add Room">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="manage" layoutX="579.0" layoutY="327.0" mnemonicParsing="false" onAction="#manageSession" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #4ff792;" styleClass="student_menu_btn" stylesheets="@../../css/student_groups_menu.css" text="Manage Sessions">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
             </content>
@@ -179,30 +184,77 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tableView1" prefHeight="326.0" prefWidth="808.0">
+                        <TableView fx:id="tableView1" prefHeight="326.0" prefWidth="956.0">
                            <columns>
-                              <TableColumn fx:id="id1" prefWidth="104.0" text="ID" />
-                              <TableColumn fx:id="session1" minWidth="0.0" prefWidth="204.0" text="Session" />
-                              <TableColumn fx:id="room1" prefWidth="230.0" text="Room" />
-                              <TableColumn fx:id="sessionDetails1" prefWidth="269.0" text="Session Details" />
+                               <TableColumn fx:id="ID" prefWidth="47.094390869140625" text="ID" />
+                               <TableColumn fx:id="L1" prefWidth="114.11322021484375" text="Lecturer 1" />
+                               <TableColumn fx:id="L2" prefWidth="132.22650146484375" text="Lecturer 2" />
+                               <TableColumn fx:id="TAG" prefWidth="54.339599609375" text="Tag" />
+                               <TableColumn fx:id="GID" prefWidth="108.67926025390625" text="Group ID" />
+                               <TableColumn fx:id="SUBJECT" prefWidth="94.188720703125" text="Subject" />
+                               <TableColumn fx:id="TYPE" prefWidth="141.282958984375" text="Session Type" />
+                               <TableColumn fx:id="NOS" prefWidth="133.13214111328125" text="Number of Students" />
+                               <TableColumn fx:id="DURATION" prefWidth="134.943359375" text="Duration" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
             </content>
           </Tab>
-            <Tab text="Non-available Times">
+            <Tab text="Parallel">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView fx:id="tableView2" prefHeight="326.0" prefWidth="808.0">
+                        <TableView fx:id="tableView2" prefHeight="326.0" prefWidth="956.0">
                            <columns>
-                              <TableColumn fx:id="id2" prefWidth="104.0" text="ID" />
-                              <TableColumn fx:id="session2" minWidth="0.0" prefWidth="204.0" text="Session" />
-                              <TableColumn fx:id="room2" prefWidth="230.0" text="Room" />
-                              <TableColumn fx:id="sessionDetails2" prefWidth="269.0" text="Session Details" />
+                               <TableColumn fx:id="PARA_SES_ID" prefWidth="47.094390869140625" text="ID" />
+                               <TableColumn fx:id="PARA_SES_L1" prefWidth="114.11322021484375" text="Lecturer 1" />
+                               <TableColumn fx:id="PARA_SES_L2" prefWidth="132.22650146484375" text="Lecturer 2" />
+                               <TableColumn fx:id="PARA_SES_TAG" prefWidth="54.339599609375" text="Tag" />
+                               <TableColumn fx:id="PARA_SES_GID" prefWidth="108.67926025390625" text="Group ID" />
+                               <TableColumn fx:id="PARA_SES_SUBJECT" prefWidth="94.188720703125" text="Subject" />
+                               <TableColumn fx:id="PARA_SES_TYPE" prefWidth="141.282958984375" text="Session Type" />
+                               <TableColumn fx:id="PARA_SES_NOS" prefWidth="133.13214111328125" text="Number of Students" />
+                               <TableColumn fx:id="PARA_SES_DURATION" prefWidth="134.943359375" text="Duration" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Non-overlapping">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView21" prefHeight="326.0" prefWidth="956.0">
+                           <columns>
+                               <TableColumn fx:id="NON_SES_ID" prefWidth="47.094390869140625" text="ID" />
+                               <TableColumn fx:id="NON_SES_L1" prefWidth="114.11322021484375" text="Lecturer 1" />
+                               <TableColumn fx:id="NON_SES_L2" prefWidth="132.22650146484375" text="Lecturer 2" />
+                               <TableColumn fx:id="NON_SES_TAG" prefWidth="54.339599609375" text="Tag" />
+                               <TableColumn fx:id="NON_SES_GID" prefWidth="108.67926025390625" text="Group ID" />
+                               <TableColumn fx:id="NON_SES_SUBJECT" prefWidth="94.188720703125" text="Subject" />
+                               <TableColumn fx:id="NON_SES_TYPE" prefWidth="141.282958984375" text="Session Type" />
+                               <TableColumn fx:id="NON_SES_NOS" prefWidth="133.13214111328125" text="Number of Students" />
+                               <TableColumn fx:id="NON_SES_DURATION" prefWidth="134.943359375" text="Duration" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Non Available">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView211" prefHeight="326.0" prefWidth="808.0">
+                           <columns>
+                              <TableColumn fx:id="id211" prefWidth="104.0" text="ID" />
+                              <TableColumn fx:id="session211" minWidth="0.0" prefWidth="204.0" text="Session" />
+                              <TableColumn fx:id="room211" prefWidth="230.0" text="Room" />
+                              <TableColumn fx:id="sessionDetails211" prefWidth="269.0" text="Session Details" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
                </content>
             </Tab>
         </tabs>

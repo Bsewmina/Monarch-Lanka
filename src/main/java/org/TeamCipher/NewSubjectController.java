@@ -28,58 +28,41 @@ public class NewSubjectController {
     private RadioButton rButton1, rButton2;
 
 
-    //----------------------------------------------------------------------------------------
-
     public void Subject(ActionEvent event) throws IOException {
-
         App.setRoot("Subject_Managment");
     }
 
-    public void WorkingDH(ActionEvent event) {
-
-        mainLabel.setText("WorkingDH Clicked");
+    public void WorkingDH(ActionEvent event) throws IOException {
+        App.setRoot("DaysHours");
     }
 
     public void lecturers(ActionEvent event) throws IOException {
-
         App.setRoot("Lecturer_Managment");
     }
 
-    public void logout(ActionEvent event) {
-
-        mainLabel.setText("logout Clicked");
+    public void session(ActionEvent event) throws IOException {
+        App.setRoot("manageRoom");
     }
 
-    public void session(ActionEvent event) {
-
-        mainLabel.setText("session Clicked");
+    public void statistic(ActionEvent event) throws IOException {
+        App.setRoot("statistic");
     }
 
-    public void statistic(ActionEvent event) {
-
-        mainLabel.setText("statistics Clicked");
+    public void studentGoups(ActionEvent event) throws IOException {
+        App.setRoot("student_groups_menu");
     }
 
-    public void studentGoups(ActionEvent event) {
-
+    public void location(ActionEvent event ) throws IOException {
+        App.setRoot("location");
     }
 
-    public void location(ActionEvent event) {
-        mainLabel.setText("location Clicked");
-    }
-
-    public void tags(ActionEvent event) {
-
-        mainLabel.setText("tags Clicked");
+    public void tags(ActionEvent event) throws IOException {
+        App.setRoot("tags_menu");
     }
 
     public void timeTables(ActionEvent event) throws IOException {
-
-        App.setRoot("new_lecturer");
-        //mainLabel.setText("Time Table Clicked");
-
     }
-    //----------------------------------
+    //------------------------------------------------------------------------------------------
 
     public int getSemester(){
         if (rButton1.isSelected()){

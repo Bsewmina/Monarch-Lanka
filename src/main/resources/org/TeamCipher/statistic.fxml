@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.chart.PieChart?>
-<?import javafx.scene.shape.Line?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.LocationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1112.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.TeamCipher.StaticController">
 
     <!--Change Controller accordingly up here^^ -->
 
@@ -145,22 +145,22 @@
                 </Button>
             </children>
         </VBox>
-        <Label layoutX="381.0" layoutY="121.0" text="18" textFill="#54f0b1">
+        <Label fx:id="reglecture" layoutX="381.0" layoutY="121.0" text="18" textFill="#54f0b1">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="552.0" layoutY="121.0" text="224" textFill="#54f0b1">
+        <Label fx:id="studentCount" layoutX="552.0" layoutY="121.0" text="224" textFill="#54f0b1">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="767.0" layoutY="121.0" text="9" textFill="#54f0b1">
+        <Label fx:id="subjectCount" layoutX="741.0" layoutY="121.0" prefHeight="35.0" prefWidth="54.0" text="78" textFill="#54f0b1">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="944.0" layoutY="121.0" text="16" textFill="#54f0b1">
+        <Label fx:id="regiRooms" layoutX="944.0" layoutY="121.0" text="16" textFill="#54f0b1">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
@@ -221,11 +221,11 @@
                 <Font name="System Bold" size="14.0" />
             </font>
         </Label>
-        <Label layoutX="473.0" layoutY="367.0" prefHeight="17.0" prefWidth="129.0" text="Dr. Suriyawansha" />
-        <Label layoutX="473.0" layoutY="414.0" prefHeight="17.0" prefWidth="129.0" text="Y4S2.DS.2.3" />
-        <Label layoutX="473.0" layoutY="455.0" prefHeight="17.0" prefWidth="129.0" text="IT project Management" />
+        <Label fx:id="lectureID" layoutX="473.0" layoutY="367.0" prefHeight="17.0" prefWidth="129.0" text="Dr. Suriyawansha" />
+        <Label fx:id="groupID" layoutX="473.0" layoutY="414.0" prefHeight="17.0" prefWidth="129.0" text="Y4S2.DS.2.3" />
+        <Label fx:id="lsubject" layoutX="473.0" layoutY="455.0" prefHeight="17.0" prefWidth="129.0" text="IT project Management" />
         <Label layoutX="473.0" layoutY="607.0" prefHeight="17.0" prefWidth="53.0" text="20" />
         <Label layoutX="473.0" layoutY="656.0" prefHeight="17.0" prefWidth="59.0" text="13" />
-        <PieChart layoutX="751.0" layoutY="438.0" prefHeight="276.0" prefWidth="307.0" title="Locations" />
+        <PieChart fx:id="locationChart" layoutX="745.0" layoutY="367.0" prefHeight="276.0" prefWidth="307.0" title="Locations" />
     </children>
 </AnchorPane>

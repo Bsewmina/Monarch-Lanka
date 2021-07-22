@@ -113,12 +113,12 @@ public class NotAvailableRoomsController implements Initializable {
         PreparedStatement ps = null;
         {
             try {
-                String sql = "INSERT INTO nonav_sessions  VALUES (null,?,?,?,?,?)";
+                String sql = "INSERT INTO sessions  VALUES (null,?,?,?,?,?)";
                 ps = con.prepareStatement(sql);
 
-                ps.setString(1, String.valueOf(CHB_SID.getValue()));
-                ps.setString(2, String.valueOf(CHB_GID.getValue()));
-                ps.setString(3, String.valueOf(CHB_RID.getValue()));
+                ps.setString(1, String.valueOf(CHB_SID));
+                ps.setString(2, String.valueOf(CHB_GID));
+                ps.setString(3, String.valueOf(CHB_RID));
                 ps.setString(4, String.valueOf(s_date.getValue()));
                 ps.setString(5, String.valueOf(Sp_Session_Start_THR.getValue()+"Hrs "+Sp_Session_Start_TMin.getValue()+"Min"+ "_To_"+Sp_Session_End_THR.getValue()+"Hrs"+Sp_Session_End_TMin.getValue()+"Min"));
 
@@ -135,10 +135,10 @@ public class NotAvailableRoomsController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Location");
+            rs = con.createStatement().executeQuery("SELECT * FROM Temp");
             while (rs.next()) {
 
-                CHB_RID.getItems().add(rs.getString("ID"));
+                CHB_RID.getItems().add(rs.getString("RID"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -149,10 +149,10 @@ public class NotAvailableRoomsController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Session");
+            rs = con.createStatement().executeQuery("SELECT * FROM Temp");
             while (rs.next()) {
 
-                CHB_SID.getItems().add(rs.getString("s_id"));
+                CHB_SID.getItems().add(rs.getString("SID"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -162,10 +162,10 @@ public class NotAvailableRoomsController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM student_groups");
+            rs = con.createStatement().executeQuery("SELECT * FROM Temp");
             while (rs.next()) {
 
-                CHB_GID.getItems().add(rs.getString("group_id"));
+                CHB_GID.getItems().add(rs.getString("GID"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

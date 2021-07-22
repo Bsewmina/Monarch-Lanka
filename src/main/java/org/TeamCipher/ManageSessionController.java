@@ -71,9 +71,9 @@ public class ManageSessionController implements Initializable {
         mainLabel.setText("logout Clicked");
     }
 
-    public void session(ActionEvent event) {
+    public void session(ActionEvent event) throws IOException {
 
-        mainLabel.setText("session Clicked");
+        App.setRoot("ManageSession");
     }
 
     public void statistic(ActionEvent event) throws IOException {
@@ -179,7 +179,7 @@ public class ManageSessionController implements Initializable {
             choBox_seleLec2.setValue(sessionTable.getLec2());
             choBox_tag.setValue(sessionTable.getTag());
             choBox_group.setValue(sessionTable.getGroup());
-            choBox_searchType.setValue(sessionTable.getsType());
+            choBox_searchType.setValue(sessionTable.getSsType());
 
         }
     }
@@ -262,9 +262,9 @@ public class ManageSessionController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Lecturer");
+            rs = con.createStatement().executeQuery("SELECT * FROM tags");
             while (rs.next()) {
-                choBox_tag.getItems().add(rs.getString("name"));
+                choBox_tag.getItems().add(rs.getString("related_tag"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -272,12 +272,14 @@ public class ManageSessionController implements Initializable {
     }
 
     public void getGroup() throws SQLException {
+
+
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Lecturer");
+            rs = con.createStatement().executeQuery("SELECT * FROM student_groups");
             while (rs.next()) {
-                choBox_group.getItems().add(rs.getString("name"));
+                choBox_group.getItems().add(rs.getString("subgroup_id"));
             }
 
         } catch (SQLException throwables) {
@@ -288,7 +290,7 @@ public class ManageSessionController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Lecturer");
+            rs = con.createStatement().executeQuery("SELECT * FROM Subject");
             while (rs.next()) {
                 choBox_subject.getItems().add(rs.getString("name"));
             }
@@ -318,12 +320,16 @@ public class ManageSessionController implements Initializable {
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
         lec1.setCellValueFactory(new PropertyValueFactory<>("lec1"));
         lec2.setCellValueFactory(new PropertyValueFactory<>("lec2"));
-        session.setCellValueFactory(new PropertyValueFactory<>("sesType"));
+        session.setCellValueFactory(new PropertyValueFactory<>("ssType"));
         subject.setCellValueFactory(new PropertyValueFactory<>("subject"));
         group.setCellValueFactory(new PropertyValueFactory<>("group"));
         tag.setCellValueFactory(new PropertyValueFactory<>("tag"));
 
         tableView.setItems(objList);
+    }
+
+    public void createSession(ActionEvent event) throws IOException {
+        App.setRoot("AddSession1");
     }
 
 

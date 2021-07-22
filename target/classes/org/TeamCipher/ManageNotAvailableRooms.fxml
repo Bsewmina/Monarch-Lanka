@@ -161,7 +161,7 @@
             </TableView>
          </content>
       </ScrollPane>
-      <Button fx:id="backbtn" layoutX="758.0" layoutY="635.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="96.0" text="Back" />
+      <Button layoutX="758.0" layoutY="635.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" text="Back" />
       <Button layoutX="1055.0" layoutY="635.0" mnemonicParsing="false" onAction="#updateSession" prefHeight="25.0" prefWidth="96.0" text="Edit" />
       <Button fx:id="Btn_RemoveSession" layoutX="905.0" layoutY="635.0" mnemonicParsing="false" onAction="#RemoveSession" prefHeight="25.0" prefWidth="96.0" text="Delete" />
       <TextField fx:id="TF_sesid" layoutX="349.0" layoutY="544.0" prefHeight="25.0" prefWidth="118.0" />

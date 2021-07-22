@@ -16,37 +16,24 @@ public class PrimaryController {
     private Label mainLabel;
     @FXML
     private ImageView logo;
-    //btnTimetables,btnLecturers,btnSubject,btnStudentGroups,btnLocation,btnTag,btnWorking,btnStatistic,btnSession,btnLogout;
 
     public void Subject(ActionEvent event) throws IOException {
-
         App.setRoot("Subject_Managment");
     }
 
-    public void WorkingDH(ActionEvent event) {
-
-        mainLabel.setText("WorkingDH Clicked");
+    public void WorkingDH(ActionEvent event) throws IOException {
+        App.setRoot("DaysHours");
     }
 
     public void lecturers(ActionEvent event) throws IOException {
-
         App.setRoot("Lecturer_Managment");
     }
 
-    public void logout(ActionEvent event) {
-
-        mainLabel.setText("logout Clicked");
-    }
-
     public void session(ActionEvent event) throws IOException {
-
-        mainLabel.setText("session Clicked");
         App.setRoot("manageRoom");
     }
 
     public void statistic(ActionEvent event) throws IOException {
-
-        mainLabel.setText("statistics Clicked");
         App.setRoot("statistic");
     }
 
@@ -55,7 +42,7 @@ public class PrimaryController {
     }
 
     public void location(ActionEvent event ) throws IOException {
-        App.setRoot("AddSession1");
+        App.setRoot("location");
     }
 
     public void tags(ActionEvent event) throws IOException {
@@ -63,10 +50,7 @@ public class PrimaryController {
     }
 
     public void timeTables(ActionEvent event) throws IOException {
-        App.setRoot("ManageSession");
-
     }
-
     //------------------------------------------------------------------------------------------
 }
 

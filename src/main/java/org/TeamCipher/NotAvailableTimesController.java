@@ -139,10 +139,10 @@ public class NotAvailableTimesController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Session");
+            rs = con.createStatement().executeQuery("SELECT * FROM sessions");
             while (rs.next()) {
 
-                CBH_lecturer.getItems().add(rs.getString("s_lecturer1"));
+                CBH_lecturer.getItems().add(rs.getString("session_id"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -153,10 +153,10 @@ public class NotAvailableTimesController implements Initializable {
         Connection con = SQliteConnection.DBconnect();
         ResultSet rs = null;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Session");
+            rs = con.createStatement().executeQuery("SELECT * FROM Sessions");
             while (rs.next()) {
 
-                CHB_Session_id.getItems().add(rs.getString("s_id"));
+                CHB_Session_id.getItems().add(rs.getString("session_id"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
